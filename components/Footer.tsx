@@ -8,7 +8,7 @@ const Footer = () => {
       <div className="container">
         <div className={styles.top}>
           <div className={styles.brand}>
-            <Image src="/logo-word-light.png" alt="OFFEE" width={150} height={42} />
+            <Image src="/logo-light.png" alt="OFFEE" width={60} height={60} />
             <p className={styles.tagline}>A hospitality-powered productivity environment.</p>
           </div>
           <div className={styles.nav}>

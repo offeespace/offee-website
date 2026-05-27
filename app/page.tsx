@@ -25,7 +25,7 @@ export default function Home() {
           <div className={styles.heroContent}>
             <div className="eyebrow" style={{ color: 'var(--gold)', marginBottom: '20px' }}>A Hospitality-Powered Productivity Environment</div>
             <h1 className={styles.title}>
-              <Image src="/logo-word-light.png" alt="OFFEE" width={400} height={110} priority className={styles.heroLogo} />
+              <Image src="/logo-light.png" alt="OFFEE" width={120} height={120} priority className={styles.heroLogo} />
             </h1>
             <div className={styles.divider}></div>
             <p className={styles.subtitle}>Warmth is the Infrastructure. Focus is the Product.</p>
