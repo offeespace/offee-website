@@ -1,0 +1,80 @@
+.footer {
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+  padding: 80px 0 40px;
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 80px;
+  flex-wrap: wrap;
+  gap: 60px;
+}
+
+.brand {
+  max-width: 300px;
+}
+
+.tagline {
+  font-size: 13px;
+  color: var(--gray);
+  margin-top: 20px;
+  line-height: 1.6;
+}
+
+.nav {
+  display: flex;
+  gap: 80px;
+  flex-wrap: wrap;
+}
+
+.column h4 {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--gold);
+  margin-bottom: 24px;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.column a {
+  font-size: 13px;
+  color: var(--gray);
+}
+
+.column a:hover {
+  color: var(--cream);
+}
+
+.bottom {
+  border-top: 1px solid var(--border);
+  padding-top: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bottom p {
+  font-size: 11px;
+  color: var(--gray);
+  letter-spacing: 0.1em;
+}
+
+@media (max-width: 768px) {
+  .top {
+    flex-direction: column;
+    gap: 40px;
+  }
+  
+  .nav {
+    gap: 40px;
+    justify-content: space-between;
+    width: 100%;
+  }
+}

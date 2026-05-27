@@ -1,0 +1,1515 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OFFEE — Brand Guidelines & Identity System</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Sora:wght@300;400;600;700&display=swap"
+    rel="stylesheet">
+  <style>
+    :root {
+      --black: #1A1A1A;
+      --cream: #E7DCC6;
+      --brown: #7B5E3C;
+      --green: #4D5A43;
+      --gray: #8B8B8B;
+      --gold: #C9A96E;
+      --surface: #242424;
+      --surface2: #2E2E2E;
+      --border: rgba(231, 220, 198, 0.12);
+      --border-strong: rgba(231, 220, 198, 0.25);
+      --font-display: 'Sora', sans-serif;
+      --font-body: 'Poppins', sans-serif;
+
+      /* Diagonal Brand Gradients (Starting from each brand color at 135deg) */
+      --grad-black: linear-gradient(135deg, #1A1A1A 0%, #2D2D2D 100%);
+      --grad-cream: linear-gradient(135deg, #E7DCC6 0%, #CBBF9A 100%);
+      --grad-brown: linear-gradient(135deg, #7B5E3C 0%, #563E24 100%);
+      --grad-green: linear-gradient(135deg, #4D5A43 0%, #303A29 100%);
+      --grad-gray: linear-gradient(135deg, #8B8B8B 0%, #5C5C5C 100%);
+      --grad-gold: linear-gradient(135deg, #C9A96E 0%, #957A43 100%);
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: var(--black);
+      color: var(--cream);
+      font-family: var(--font-body);
+      font-size: 15px;
+      line-height: 1.75;
+      -webkit-font-smoothing: antialiased;
+      display: flex;
+    }
+
+    /* Side Navigation Drawer */
+    aside {
+      width: 290px;
+      height: 100vh;
+      position: fixed;
+      top: 0;
+      left: 0;
+      background: rgba(26, 26, 26, 0.96);
+      backdrop-filter: blur(20px);
+      border-right: 1px solid var(--border);
+      padding: 40px 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      z-index: 100;
+    }
+
+    .brand-logo-container {
+      margin-bottom: 30px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .brand-logo-container img {
+      height: 34px;
+      width: auto;
+      display: block;
+    }
+
+    .nav-menu {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      flex-grow: 1;
+      overflow-y: auto;
+      padding-right: 4px;
+    }
+
+    .nav-menu::-webkit-scrollbar {
+      width: 4px;
+    }
+
+    .nav-menu::-webkit-scrollbar-thumb {
+      background: var(--border-strong);
+      border-radius: 2px;
+    }
+
+    .nav-menu a {
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--gray);
+      text-decoration: none;
+      padding: 8px 14px;
+      border-radius: 4px;
+      transition: all 0.2s ease;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      border: 1px solid transparent;
+    }
+
+    .nav-menu a:hover,
+    .nav-menu a.active {
+      color: var(--cream);
+      background: rgba(231, 220, 198, 0.05);
+      border-color: var(--border);
+    }
+
+    .nav-footer {
+      font-size: 9px;
+      letter-spacing: 0.1em;
+      color: var(--gray);
+      opacity: 0.6;
+      border-top: 1px solid var(--border);
+      padding-top: 15px;
+      margin-top: 15px;
+    }
+
+    /* Main Content Area */
+    main {
+      margin-left: 290px;
+      flex: 1;
+      min-height: 100vh;
+      padding: 60px 50px;
+      max-width: 1200px;
+    }
+
+    /* Hero Section */
+    .hero-banner {
+      position: relative;
+      background: linear-gradient(135deg, rgba(123, 94, 60, 0.15) 0%, rgba(26, 26, 26, 0) 100%);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 50px 40px;
+      margin-bottom: 50px;
+      overflow: hidden;
+    }
+
+    .hero-banner::after {
+      content: '';
+      position: absolute;
+      width: 300px;
+      height: 300px;
+      background: radial-gradient(circle, rgba(201, 169, 110, 0.1) 0%, transparent 70%);
+      top: -100px;
+      right: -100px;
+      pointer-events: none;
+    }
+
+    .eyebrow {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 12px;
+    }
+
+    .hero-banner h1 {
+      font-family: var(--font-display);
+      font-size: clamp(28px, 4vw, 42px);
+      font-weight: 700;
+      line-height: 1.15;
+      color: var(--cream);
+      margin-bottom: 12px;
+      letter-spacing: 0.05em;
+    }
+
+    .hero-banner p {
+      font-size: 14px;
+      color: var(--gray);
+      max-width: 720px;
+      line-height: 1.8;
+    }
+
+    /* Sections styling */
+    section {
+      padding: 50px 0;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 30px;
+    }
+
+    section:last-of-type {
+      border-bottom: none;
+      margin-bottom: 0;
+    }
+
+    .section-header {
+      margin-bottom: 36px;
+    }
+
+    .section-title {
+      font-family: var(--font-display);
+      font-size: 24px;
+      font-weight: 600;
+      color: var(--cream);
+      letter-spacing: 0.05em;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .section-title::after {
+      content: '';
+      height: 1px;
+      flex-grow: 1;
+      background: var(--border);
+    }
+
+    .section-desc {
+      font-size: 13px;
+      color: var(--gray);
+      margin-top: 10px;
+      max-width: 800px;
+    }
+
+    /* Grid Layouts */
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    /* Custom Premium Cards */
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 24px;
+      position: relative;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .card:hover {
+      border-color: rgba(201, 169, 110, 0.3);
+      transform: translateY(-2px);
+    }
+
+    /* Mockup visual containers */
+    .mockup-container {
+      margin-bottom: 24px;
+      border-radius: 8px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      background: #111;
+      position: relative;
+    }
+
+    .mockup-container img {
+      width: 100%;
+      height: auto;
+      display: block;
+      transition: transform 0.5s ease;
+    }
+
+    .mockup-container img:hover {
+      transform: scale(1.02);
+    }
+
+    .mockup-caption {
+      padding: 14px 20px;
+      background: var(--surface2);
+      border-top: 1px solid var(--border);
+      font-size: 12px;
+      color: var(--cream);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .mockup-caption span:last-child {
+      font-family: var(--font-display);
+      font-size: 10px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--gold);
+    }
+
+    /* Logo Showcase Grid */
+    .logo-showcase {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      margin-bottom: 20px;
+    }
+
+    .logo-container-card {
+      background: #1e1e1e;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 30px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      position: relative;
+    }
+
+    .logo-container-card.light-bg {
+      background: #F9F7F2;
+      border-color: rgba(0, 0, 0, 0.06);
+    }
+
+    .logo-container-card.light-bg .logo-title {
+      color: #1A1A1A;
+    }
+
+    .logo-container-card.light-bg .logo-spec {
+      color: #7A7A7A;
+      border-top-color: rgba(0, 0, 0, 0.08);
+    }
+
+    .logo-container-card img {
+      max-height: 60px;
+      width: auto;
+      max-width: 90%;
+      object-fit: contain;
+      transition: transform 0.3s ease;
+    }
+
+    .logo-container-card img:hover {
+      transform: scale(1.04);
+    }
+
+    .logo-title {
+      font-family: var(--font-display);
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: var(--cream);
+      margin-top: 6px;
+    }
+
+    .logo-spec {
+      width: 100%;
+      text-align: center;
+      font-size: 10px;
+      color: var(--gray);
+      border-top: 1px solid var(--border);
+      padding-top: 10px;
+      margin-top: 6px;
+    }
+
+    /* Color Swatches and Gradients */
+    .color-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .color-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .gradient-preview {
+      height: 120px;
+      position: relative;
+      display: flex;
+      align-items: flex-end;
+      padding: 12px;
+    }
+
+    .gradient-badge {
+      background: rgba(0, 0, 0, 0.6);
+      backdrop-filter: blur(8px);
+      padding: 4px 10px;
+      border-radius: 3px;
+      font-size: 9px;
+      letter-spacing: 0.1em;
+      color: #fff;
+      font-family: var(--font-display);
+      font-weight: 600;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .color-details {
+      padding: 16px;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .color-name {
+      font-family: var(--font-display);
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--cream);
+      margin-bottom: 2px;
+    }
+
+    .color-hex {
+      font-family: var(--font-display);
+      font-size: 12px;
+      color: var(--gold);
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+    .color-code-row {
+      display: flex;
+      justify-content: space-between;
+      font-size: 10px;
+      color: var(--gray);
+      margin-bottom: 4px;
+    }
+
+    .color-code-row span:last-child {
+      font-family: monospace;
+      color: var(--cream);
+    }
+
+    .gradient-css-box {
+      background: rgba(0, 0, 0, 0.2);
+      border: 1px solid rgba(231, 220, 198, 0.05);
+      border-radius: 4px;
+      padding: 6px 10px;
+      margin-top: 10px;
+      font-size: 10px;
+      font-family: monospace;
+      color: var(--gray);
+      white-space: nowrap;
+      overflow-x: auto;
+    }
+
+    /* Soundscaping Levels grid */
+    .sound-level-card {
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .sound-level-num {
+      font-family: var(--font-display);
+      font-size: 32px;
+      font-weight: 700;
+      color: var(--gold);
+      margin-bottom: 6px;
+    }
+
+    .sound-level-label {
+      font-size: 11px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--cream);
+      margin-bottom: 8px;
+    }
+
+    /* Interior Design Principles */
+    .interior-card {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .interior-icon {
+      font-size: 28px;
+    }
+
+    .interior-title {
+      font-family: var(--font-display);
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--cream);
+    }
+
+    .interior-desc {
+      font-size: 12px;
+      color: var(--gray);
+      line-height: 1.7;
+    }
+
+    /* Layout Zones */
+    .zone-row {
+      display: grid;
+      grid-template-columns: 80px 1fr 120px;
+      align-items: center;
+      gap: 20px;
+      padding: 16px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .zone-row:last-child {
+      border-bottom: none;
+    }
+
+    .zone-badge {
+      font-size: 26px;
+      text-align: center;
+    }
+
+    .zone-info h4 {
+      font-family: var(--font-display);
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--cream);
+      margin-bottom: 4px;
+    }
+
+    .zone-info p {
+      font-size: 12px;
+      color: var(--gray);
+    }
+
+    .zone-meta {
+      text-align: right;
+    }
+
+    .zone-cap {
+      font-family: var(--font-display);
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--gold);
+    }
+
+    .zone-lbl {
+      font-size: 9px;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--gray);
+    }
+
+    /* UI Patterns Code Demo */
+    .ui-pattern-card {
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 20px;
+    }
+
+    .ui-glass-preview {
+      background: rgba(255, 255, 255, 0.03);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(231, 220, 198, 0.12);
+      border-radius: 4px;
+      padding: 24px;
+      text-align: center;
+      margin-bottom: 14px;
+    }
+
+    .ui-glass-btn {
+      background: var(--gold);
+      border: none;
+      color: var(--black);
+      padding: 8px 18px;
+      font-family: var(--font-display);
+      font-weight: 600;
+      font-size: 10px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      border-radius: 3px;
+      cursor: pointer;
+      transition: opacity 0.2s;
+    }
+
+    .ui-glass-btn:hover {
+      opacity: 0.9;
+    }
+
+    /* Typography section */
+    .type-demo {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 30px;
+      margin-bottom: 20px;
+    }
+
+    .type-title-large {
+      font-family: var(--font-display);
+      font-size: 48px;
+      font-weight: 700;
+      line-height: 1.1;
+      color: var(--cream);
+      margin-bottom: 12px;
+    }
+
+    .type-specimen {
+      font-size: 12px;
+      color: var(--gray);
+      border-top: 1px solid var(--border);
+      padding-top: 12px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .type-specimen span:first-child {
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: var(--gold);
+    }
+
+    /* Incorrect Use / Rules */
+    .do-dont-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+
+    .rules-card {
+      background: rgba(77, 90, 67, 0.05);
+      border: 1px solid rgba(77, 90, 67, 0.2);
+      border-radius: 6px;
+      padding: 24px;
+    }
+
+    .rules-card.dont {
+      background: rgba(231, 76, 60, 0.03);
+      border-color: rgba(231, 76, 60, 0.15);
+    }
+
+    .rules-title {
+      font-family: var(--font-display);
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .rules-card.do .rules-title {
+      color: #7dcea0;
+    }
+
+    .rules-card.dont .rules-title {
+      color: #e74c3c;
+    }
+
+    .rule-item {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      margin-bottom: 12px;
+      font-size: 12px;
+      color: var(--gray);
+    }
+
+    .rule-icon {
+      font-weight: bold;
+      flex-shrink: 0;
+    }
+
+    .rules-card.do .rule-icon {
+      color: #7dcea0;
+    }
+
+    .rules-card.dont .rule-icon {
+      color: #e74c3c;
+    }
+
+    /* Copywriting / Voice Section */
+    .voice-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .voice-box {
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 20px;
+      background: rgba(26, 26, 26, 0.4);
+    }
+
+    .voice-header {
+      font-family: var(--font-display);
+      font-size: 10px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+      color: var(--gold);
+    }
+
+    .voice-text {
+      font-style: italic;
+      font-size: 13px;
+      line-height: 1.6;
+      color: var(--cream);
+    }
+
+    /* Mobile Responsive Styles */
+    @media(max-width: 992px) {
+      body {
+        flex-direction: column;
+      }
+
+      aside {
+        width: 100%;
+        height: auto;
+        position: relative;
+        border-right: none;
+        border-bottom: 1px solid var(--border);
+        padding: 24px 30px;
+      }
+
+      .brand-logo-container {
+        margin-bottom: 0;
+        padding-bottom: 0;
+        border-bottom: none;
+      }
+
+      .nav-menu {
+        display: none;
+      }
+
+      .nav-footer {
+        display: none;
+      }
+
+      main {
+        margin-left: 0;
+        padding: 40px 20px;
+      }
+
+      .color-grid,
+      .grid-3,
+      .grid-2,
+      .logo-showcase,
+      .do-dont-grid,
+      .voice-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .zone-row {
+        grid-template-columns: 60px 1fr;
+      }
+
+      .zone-meta {
+        grid-column: 2;
+        text-align: left;
+        margin-top: -6px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Sidebar Navigation -->
+  <aside>
+    <div class="brand-logo-container">
+      <img src="logo-word-light.png" alt="OFFEE LOGO">
+    </div>
+    <div class="nav-menu">
+      <a href="#philosophy" class="active">Philosophy</a>
+      <a href="#logos">Logo Assets</a>
+      <a href="#colors">Color Gradients</a>
+      <a href="#typography">Typography</a>
+      <a href="#serveware">F&B Serveware</a>
+      <a href="#soundscaping">Soundscaping</a>
+      <a href="#digital">Digital UI Systems</a>
+      <a href="#attire">Staff Attire</a>
+      <a href="#storefront">Storefront Spec</a>
+      <a href="#demarcation">Track B Demarcation</a>
+      <a href="#interior">Interior Design</a>
+      <a href="#layout">Layout Zones</a>
+      <a href="#voice">Voice & Tone</a>
+      <a href="#rules">Rules & Integrity</a>
+    </div>
+    <div class="nav-footer">
+      OFFEE SPACE SYSTEM &copy; 2026<br>
+      ALL RIGHTS RESERVED
+    </div>
+  </aside>
+
+  <!-- Main Content Wrapper -->
+  <main>
+
+    <!-- Header Banner -->
+    <div class="hero-banner" id="philosophy">
+      <div class="eyebrow">IDENTITY MANUAL & GUIDELINES</div>
+      <h1>OFFEE BRAND IDENTITY</h1>
+      <p>OFFEE is a modern hospitality-workspace brand built for hybrid professionals, remote builders, and creative
+        minds. This document preserves our core design principles, spatial values, and visual assets, ensuring
+        consistency from local pilots to global footprints.</p>
+    </div>
+
+    <!-- Spatial Values Section -->
+    <section>
+      <div class="section-header">
+        <div class="eyebrow">01 — SPATIAL PHILOSOPHY</div>
+        <h2 class="section-title">The Product is the Environment</h2>
+        <p class="section-desc">Our brand succeeds when our spaces validate a professional's day. Understanding how our
+          brand values transition from ideas to physical realities is paramount.</p>
+      </div>
+
+      <div class="grid-3">
+        <div class="card">
+          <div class="eyebrow" style="color:var(--gold); margin-bottom:12px;">Warmth & Comfort</div>
+          <p style="font-size:12px; color:var(--gray); line-height:1.75;">OFFEE is intentionally styled to avoid
+            standard corporate coldness. By choosing natural wood panels, deep forest greens, and soft architectural
+            lighting, we prioritize organic visual comfort that welcomes extended stays.</p>
+        </div>
+        <div class="card">
+          <div class="eyebrow" style="color:var(--gold); margin-bottom:12px;">Psychological Legitimacy</div>
+          <p style="font-size:12px; color:var(--gray); line-height:1.75;">Our check-in system translates payment into
+            spatial confidence. Guests aren't "café squatting"—they own their workspace access window, allowing them to
+            focus fully without performance anxiety or guilt.</p>
+        </div>
+        <div class="card">
+          <div class="eyebrow" style="color:var(--gold); margin-bottom:12px;">Separation & Focus</div>
+          <p style="font-size:12px; color:var(--gray); line-height:1.75;">We build a third place that serves as a
+            deliberate transition between home and work. Every furniture placement, soundproofing measure, and power
+            source acts as a silent partner in the user's daily progress.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Logo Section -->
+    <section id="logos">
+      <div class="section-header">
+        <div class="eyebrow">02 — OFFICIAL LOGO SYSTEM</div>
+        <h2 class="section-title">Root Brand Assets</h2>
+        <p class="section-desc">Our primary mark uses a customized architectural "FF" ligature. The horizontal lines
+          form clean columns that evoke structure and stability. Below are the verified configurations for both dark and
+          light contexts.</p>
+      </div>
+
+      <div class="logo-showcase">
+        <!-- Logo Dark -->
+        <div class="logo-container-card light-bg">
+          <img src="logo-dark.png" alt="OFFEE Logo Dark">
+          <div class="logo-title">Mark (Dark Mode / Neutral Solid)</div>
+          <div class="logo-spec">
+            File: <code>logo-dark.png</code><br>
+            Context: Transparent / Green-tinted solid black on light gray surfaces
+          </div>
+        </div>
+
+        <!-- Logo Light -->
+        <div class="logo-container-card" style="background:#0F0F0F;">
+          <img src="logo-light.png" alt="OFFEE Logo Light">
+          <div class="logo-title" style="color:var(--cream);">Mark (Light Mode / Warm Cream)</div>
+          <div class="logo-spec" style="border-top-color:rgba(255,255,255,0.08);">
+            File: <code>logo-light.png</code><br>
+            Context: Soft warm cream rendering on dark surface applications
+          </div>
+        </div>
+
+        <!-- Logo Word Dark -->
+        <div class="logo-container-card light-bg">
+          <img src="logo-word-dark.png" alt="OFFEE Word Dark">
+          <div class="logo-title">Wordmark (On Light Cream Backgrounds)</div>
+          <div class="logo-spec">
+            File: <code>logo-word-dark.png</code><br>
+            Context: Complete branding wordmark for premium letterheads and packaging
+          </div>
+        </div>
+
+        <!-- Logo Word Light -->
+        <div class="logo-container-card" style="background:#151515;">
+          <img src="logo-word-light.png" alt="OFFEE Word Light">
+          <div class="logo-title" style="color:var(--cream);">Wordmark (On Dark/Near-Black Surfaces)</div>
+          <div class="logo-spec" style="border-top-color:rgba(255,255,255,0.08);">
+            File: <code>logo-word-light.png</code><br>
+            Context: Primary horizontal digital identity for header bars and storefronts
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Color Palettes & Diagonal Gradients Section -->
+    <section id="colors">
+      <div class="section-header">
+        <div class="eyebrow">03 — PALETTE & DIAGONAL GRADIENTS</div>
+        <h2 class="section-title">Brand Tone Gradients</h2>
+        <p class="section-desc">Our design system relies on organic, deeply saturated architectural tones. For digital
+          applications, each core color has an assigned diagonal gradient (rendered at 135deg) to add richness and avoid
+          flat vectors.</p>
+      </div>
+
+      <div class="color-grid">
+        <!-- Near Black -->
+        <div class="color-card">
+          <div class="gradient-preview" style="background: var(--grad-black);">
+            <div class="gradient-badge">135&deg; Dark Grain</div>
+          </div>
+          <div class="color-details">
+            <div>
+              <div class="color-name">Near Black</div>
+              <div class="color-hex">#1A1A1A</div>
+            </div>
+            <div>
+              <div class="color-code-row"><span>RGB:</span> <span>26, 26, 26</span></div>
+              <div class="color-code-row"><span>HSL:</span> <span>0&deg;, 0%, 10%</span></div>
+              <div class="gradient-css-box">linear-gradient(135deg, #1a1a1a, #2d2d2d)</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Warm Cream -->
+        <div class="color-card">
+          <div class="gradient-preview" style="background: var(--grad-cream);">
+            <div class="gradient-badge" style="color:#1A1A1A; background:rgba(255,255,255,0.85);">135&deg; Warm Ivory
+            </div>
+          </div>
+          <div class="color-details">
+            <div>
+              <div class="color-name">Warm Cream</div>
+              <div class="color-hex">#E7DCC6</div>
+            </div>
+            <div>
+              <div class="color-code-row"><span>RGB:</span> <span>231, 220, 198</span></div>
+              <div class="color-code-row"><span>HSL:</span> <span>40&deg;, 38%, 84%</span></div>
+              <div class="gradient-css-box">linear-gradient(135deg, #e7dcc6, #cbbf9a)</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Architectural Brown -->
+        <div class="color-card">
+          <div class="gradient-preview" style="background: var(--grad-brown);">
+            <div class="gradient-badge">135&deg; Walnut</div>
+          </div>
+          <div class="color-details">
+            <div>
+              <div class="color-name">Brown</div>
+              <div class="color-hex">#7B5E3C</div>
+            </div>
+            <div>
+              <div class="color-code-row"><span>RGB:</span> <span>123, 94, 60</span></div>
+              <div class="color-code-row"><span>HSL:</span> <span>32&deg;, 34%, 36%</span></div>
+              <div class="gradient-css-box">linear-gradient(135deg, #7b5e3c, #563e24)</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Forest Green -->
+        <div class="color-card">
+          <div class="gradient-preview" style="background: var(--grad-green);">
+            <div class="gradient-badge">135&deg; Moss</div>
+          </div>
+          <div class="color-details">
+            <div>
+              <div class="color-name">Forest Green</div>
+              <div class="color-hex">#4D5A43</div>
+            </div>
+            <div>
+              <div class="color-code-row"><span>RGB:</span> <span>77, 90, 67</span></div>
+              <div class="color-code-row"><span>HSL:</span> <span>93&deg;, 15%, 31%</span></div>
+              <div class="gradient-css-box">linear-gradient(135deg, #4d5a43, #303a29)</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Warm Gray -->
+        <div class="color-card">
+          <div class="gradient-preview" style="background: var(--grad-gray);">
+            <div class="gradient-badge">135&deg; Slate</div>
+          </div>
+          <div class="color-details">
+            <div>
+              <div class="color-name">Warm Gray</div>
+              <div class="color-hex">#8B8B8B</div>
+            </div>
+            <div>
+              <div class="color-code-row"><span>RGB:</span> <span>139, 139, 139</span></div>
+              <div class="color-code-row"><span>HSL:</span> <span>0&deg;, 0%, 55%</span></div>
+              <div class="gradient-css-box">linear-gradient(135deg, #8b8b8b, #5c5c5c)</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Premium Gold -->
+        <div class="color-card">
+          <div class="gradient-preview" style="background: var(--grad-gold);">
+            <div class="gradient-badge" style="color:#1A1A1A; background:rgba(255,255,255,0.85);">135&deg; Gold Leaf
+            </div>
+          </div>
+          <div class="color-details">
+            <div>
+              <div class="color-name">Premium Gold</div>
+              <div class="color-hex">#C9A96E</div>
+            </div>
+            <div>
+              <div class="color-code-row"><span>RGB:</span> <span>201, 169, 110</span></div>
+              <div class="color-code-row"><span>HSL:</span> <span>39&deg;, 46%, 61%</span></div>
+              <div class="gradient-css-box">linear-gradient(135deg, #c9a96e, #957a43)</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Typography Section -->
+    <section id="typography">
+      <div class="section-header">
+        <div class="eyebrow">04 — TYPOGRAPHY SYSTEM</div>
+        <h2 class="section-title">Architectural & Clean Type</h2>
+        <p class="section-desc">We utilize two Google Web fonts to define our copy structure: Sora for architectural
+          display headings, and Poppins for clean, warm body layouts.</p>
+      </div>
+
+      <div class="type-demo">
+        <div class="type-title-large">Sora Display Bold</div>
+        <p style="font-family:'Sora', sans-serif; font-size: 18px; color: var(--cream); margin-bottom: 16px;">THE THIRD
+          PLACE FOR MODERN PROFESSIONALS</p>
+        <div class="type-specimen">
+          <span>Primary Display Face</span>
+          <span>Sora (wght 300, 400, 600, 700)</span>
+        </div>
+      </div>
+
+      <div class="type-demo" style="background:rgba(231, 220, 198, 0.02);">
+        <p
+          style="font-family:'Poppins', sans-serif; font-size: 20px; font-weight:300; color: var(--cream); margin-bottom: 10px; line-height: 1.4;">
+          Poppins Sans Body</p>
+        <p
+          style="font-family:'Poppins', sans-serif; font-size: 13px; color: var(--gray); max-width: 800px; line-height: 1.8;">
+          A warm workspace outside home. People are not paying for coffee — they are paying for the legitimacy to stay,
+          the psychological separation from home, and the atmosphere that makes focused work feel intentional. The
+          product is the environment.
+        </p>
+        <div class="type-specimen" style="margin-top: 20px;">
+          <span>Primary Body Face</span>
+          <span>Poppins (wght 300, 400, 500, 600)</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- F&B Serveware & Presentation Guidelines (NEW) -->
+    <section id="serveware">
+      <div class="section-header">
+        <div class="eyebrow">05 — F&B SERVEWARE & PACKAGING</div>
+        <h2 class="section-title">Welcome Handshake Presentation</h2>
+        <p class="section-desc">Although focus is the main product of OFFEE, the welcome beverage is our physical
+          handshake. Its presentation must reflect simplicity, quality, and quiet confidence.</p>
+      </div>
+
+      <div class="mockup-container">
+        <img src="offee-serveware-mockup.png" alt="OFFEE Premium Ceramic Serveware Mockup">
+        <div class="mockup-caption">
+          <span>OFFEE debossed ceramic serveware on warm walnut table</span>
+          <span>Asset Mockup Ref: 01</span>
+        </div>
+      </div>
+
+      <div class="grid-2">
+        <div class="card">
+          <h3 class="interior-title" style="margin-bottom:12px;">Ceramic & Textures</h3>
+          <p style="font-size:12px; color:var(--gray); line-height:1.75;">
+            Our standard welcome cup is a heavy, custom matte-glazed ceramic in neutral stone-gray. The modern 'OFFEE'
+            wordmark is debossed cleanly on the front surface. We completely avoid glossy coatings, cheap plastics, or
+            vibrant white porcelain, favoring organic earthiness.
+          </p>
+        </div>
+        <div class="card">
+          <h3 class="interior-title" style="margin-bottom:12px;">Packaging Aesthetics</h3>
+          <p style="font-size:12px; color:var(--gray); line-height:1.75;">
+            For off-the-shelf goods and filters, we use unbleached organic kraft paper bags. Sealings are handled with a
+            minimal black ink stamp showing the custom architectural "FF" ligature. No flashy stickers, color prints, or
+            high-gloss plastics allowed.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Soundscaping & Acoustic Standards (NEW) -->
+    <section id="soundscaping">
+      <div class="section-header">
+        <div class="eyebrow">06 — ACOUSTIC SOUNDSCAPING</div>
+        <h2 class="section-title">Aural Architecture & Playlists</h2>
+        <p class="section-desc">Visual warmth is incomplete without auditory peace. Decibel management and curated
+          background layers are strictly monitored to foster productive concentration.</p>
+      </div>
+
+      <div class="grid-3" style="margin-bottom: 24px;">
+        <div class="sound-level-card">
+          <div class="sound-level-num">&le; 45 dB</div>
+          <div class="sound-level-label">Focus Area</div>
+          <p style="font-size:11px; color:var(--gray);">Equivalent to library silence. Voice notes or calls are strictly
+            prohibited.</p>
+        </div>
+        <div class="sound-level-card">
+          <div class="sound-level-num">&le; 60 dB</div>
+          <div class="sound-level-label">Collaboration Area</div>
+          <p style="font-size:11px; color:var(--gray);">Equivalent to soft ambient chatter. Quiet brainstorming is
+            welcomed.</p>
+        </div>
+        <div class="sound-level-card">
+          <div class="sound-level-num">&le; 50 dB</div>
+          <div class="sound-level-label">General Floor</div>
+          <p style="font-size:11px; color:var(--gray);">A gentle hum of background music mixed with organic key-clicks.
+          </p>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3 class="interior-title" style="margin-bottom:12px;">Daypart Playlists Rhythms</h3>
+        <p style="font-size:12px; color:var(--gray); line-height:1.75; margin-bottom:12px;">
+          Background music must be acoustic, organic, or atmospheric. Vocals are strictly limited to non-English or
+          highly atmospheric layers to prevent semantic distraction.
+        </p>
+        <ul style="font-size:12px; color:var(--gray); line-height:1.8; padding-left: 20px;">
+          <li><strong style="color:var(--cream);">Morning (09:00 - 12:00):</strong> Soft ambient piano, fingerstyle
+            acoustic guitar, minimalist organic loops.</li>
+          <li><strong style="color:var(--cream);">Afternoon (12:00 - 17:00):</strong> Low-frequency warm lo-fi beats,
+            ambient coffee-house hum, cozy chillhop loops.</li>
+          <li><strong style="color:var(--cream);">Evening (17:00 - 21:00):</strong> Cozy soft jazz, elegant bossa nova
+            chords, warm visual lounge ambient tracks.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Digital UI Systems (NEW) -->
+    <section id="digital">
+      <div class="section-header">
+        <div class="eyebrow">07 — DIGITAL INTERACTION SYSTEM</div>
+        <h2 class="section-title">The Glassmorphic Gateway</h2>
+        <p class="section-desc">Our digital assets on <code>offee.space</code> mirror the warm glass and wood textures
+          of our physical spaces. Buttons and cards utilize frosted-glass properties to remain premium.</p>
+      </div>
+
+      <div class="grid-2">
+        <!-- Glassmorphism card -->
+        <div class="ui-pattern-card">
+          <div class="eyebrow">Interactive Pattern</div>
+          <div class="ui-glass-preview">
+            <h4 style="font-family:var(--font-display); font-size:14px; margin-bottom:8px; color:var(--cream);">Focus
+              Day-Pass</h4>
+            <p style="font-size:11px; color:var(--gray); margin-bottom:14px;">Unlimited space access + welcome chai</p>
+            <button class="ui-glass-btn">Check In Now</button>
+          </div>
+          <div style="font-size:11px; color:var(--gray); line-height:1.6;">
+            <strong>CSS Specs:</strong><br>
+            <code>background: rgba(255, 255, 255, 0.03);</code><br>
+            <code>backdrop-filter: blur(12px);</code>
+          </div>
+        </div>
+
+        <!-- WhatsApp and Checkout styling -->
+        <div class="card">
+          <h3 class="interior-title" style="margin-bottom:12px;">Transaction Etiquette</h3>
+          <p style="font-size:12px; color:var(--gray); line-height:1.7; margin-bottom:12px;">
+            For ease of onboarding, we avoid complex custom mobile applications. All check-ins and payments are driven
+            through a clean WhatsApp Razorpay integration.
+          </p>
+          <div
+            style="background:rgba(0,0,0,0.15); padding:12px; border-radius:4px; border-left: 3px solid var(--gold); font-size:11px; font-family:monospace; color:var(--gray);">
+            <span style="color:var(--gold);">WhatsApp Template:</span><br>
+            "Welcome to focus, {name}. Your access pass for today has been checked in successfully at Perinthalmanna.
+            Show this ticket to receive your hot brew."
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Staff Attire & Hospitality Etiquette (NEW) -->
+    <section id="attire">
+      <div class="section-header">
+        <div class="eyebrow">08 — STAFF ATTIRE & SERVICE ETHICS</div>
+        <h2 class="section-title">The Invisible Host</h2>
+        <p class="section-desc">OFFEE hosts are not waiters; they are facilitators of productivity. Their visual
+          presentation and physical interactions must balance courtesy with quiet restraint.</p>
+      </div>
+
+      <div class="grid-2">
+        <div class="card">
+          <h3 class="interior-title" style="margin-bottom:12px;">Host Uniform Standards</h3>
+          <p style="font-size:12px; color:var(--gray); line-height:1.75;">
+            Our facilitators wear lightweight, textured organic linen shirts in moss green or slate gray, paired with
+            robust raw canvas utility aprons in a warm sand tone. Clean, minimal brass pins representing the
+            architectural "FF" ligature are worn on the left chest.
+          </p>
+        </div>
+        <div class="card">
+          <h3 class="interior-title" style="margin-bottom:12px;">Physical Rhythms & Flow</h3>
+          <p style="font-size:12px; color:var(--gray); line-height:1.75;">
+            Hosts observe the floor silently. The welcome beverage is delivered discretely within 15 minutes of
+            check-in, placed softly to the right of the guest's laptop with a quiet nod—never initiating conversational
+            small talk unless addressed first.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Storefront & Signage Specifications (NEW) -->
+    <section id="storefront">
+      <div class="section-header">
+        <div class="eyebrow">09 — STOREFRONT & FACADE SYSTEM</div>
+        <h2 class="section-title">Brushed Brass exterior Ident</h2>
+        <p class="section-desc">Our facade represents our transition from the outer noise to quiet focus. It utilizes
+          brushed metals, dark plaster, and frosted glass boundaries.</p>
+      </div>
+
+      <div class="grid-3">
+        <div class="card">
+          <h4 style="font-family:var(--font-display); font-size:14px; color:var(--cream); margin-bottom:8px;">Brushed
+            Brass Signage</h4>
+          <p style="font-size:11px; color:var(--gray); line-height:1.7;">
+            The primary street sign is cut from heavy, solid brushed brass plate, back-lit with extremely warm halo LED
+            bulbs (2200K). Never use glossy neon tubes, flashing screens, or cold white acrylic panels.
+          </p>
+        </div>
+        <div class="card">
+          <h4 style="font-family:var(--font-display); font-size:14px; color:var(--cream); margin-bottom:8px;">Storefront
+            transparency</h4>
+          <p style="font-size:11px; color:var(--gray); line-height:1.7;">
+            Large scale window panes must remain transparent to let passersby feel the warm wood interior. Frosting
+            patterns are only applied as a subtle 15cm geometric band to protect seating intimacy at desk-level.
+          </p>
+        </div>
+        <div class="card">
+          <h4 style="font-family:var(--font-display); font-size:14px; color:var(--cream); margin-bottom:8px;">Materials
+            & Facades</h4>
+          <p style="font-size:11px; color:var(--gray); line-height:1.7;">
+            Exterior walls are finished with rough, textured charcoal stucco or warm red brickwork. This structural
+            organic contrast alerts the customer's sensory systems that they are entering a place of organic texture.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Track B Partner Café Demarcation Kit (NEW) -->
+    <section id="demarcation">
+      <div class="section-header">
+        <div class="eyebrow">10 — TRACK B DISTRIBUTED HUBS</div>
+        <h2 class="section-title">Cafe Integration demarcations</h2>
+        <p class="section-desc">For our distributed Track B network, we integrate dedicated work-friendly corners inside
+          existing high-quality partner cafés. This spatial demarcation must be distinct.</p>
+      </div>
+
+      <div class="mockup-container">
+        <img src="offee-space-mockup.png" alt="OFFEE Track B Workspace Integration Mockup">
+        <div class="mockup-caption">
+          <span>Glassmorphic workspaces and dividers inside historic brick building</span>
+          <span>Asset Mockup Ref: 02</span>
+        </div>
+      </div>
+
+      <div class="grid-3">
+        <div class="card">
+          <h4 style="font-family:var(--font-display); font-size:14px; color:var(--cream); margin-bottom:8px;">Brass
+            Inlaid Separations</h4>
+          <p style="font-size:11px; color:var(--gray); line-height:1.7;">
+            Track B zones are visually framed using thin, brushed brass bars inlaid flush into the floorboards or
+            partition desks, creating a physical border that clearly marks where focus priority begins.
+          </p>
+        </div>
+        <div class="card">
+          <h4 style="font-family:var(--font-display); font-size:14px; color:var(--cream); margin-bottom:8px;">Felt Desk
+            Liners</h4>
+          <p style="font-size:11px; color:var(--gray); line-height:1.7;">
+            To soften acoustic reflections and partition work areas, every focus desk in a partner café features a
+            dedicated neutral stone-gray wool felt writing mat debossed with our brand monogram.
+          </p>
+        </div>
+        <div class="card">
+          <h4 style="font-family:var(--font-display); font-size:14px; color:var(--cream); margin-bottom:8px;">Leather
+            Seating Tags</h4>
+          <p style="font-size:11px; color:var(--gray); line-height:1.7;">
+            We place elegant, thick brown leather labels stamped with 'OFFEE Priority Focus Seat' over chair backs to
+            ensure drop-in café patrons do not casually squat in focused professional zones.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interior Design Principles -->
+    <section id="interior">
+      <div class="section-header">
+        <div class="eyebrow">11 — PHYSICAL SPACE PRINCIPLES</div>
+        <h2 class="section-title">Interior Design Standards</h2>
+        <p class="section-desc">The OFFEE brand lives in physical interactions. Every partner cafe or flagship space
+          must adhere to these design directives to maintain sensory consistency.</p>
+      </div>
+
+      <div class="grid-3">
+        <div class="card interior-card">
+          <div class="interior-icon">💡</div>
+          <h3 class="interior-title">Lighting Guidelines</h3>
+          <p class="interior-desc">Warm Edison-style pendants are mandatory. Harsh fluorescents are strictly forbidden.
+            The light temperature must remain consistently warm (2700K - 3000K), creating a late-afternoon mood at all
+            times.</p>
+        </div>
+        <div class="card interior-card">
+          <div class="interior-icon">🌳</div>
+          <h3 class="interior-title">Material Strategy</h3>
+          <p class="interior-desc">Integrate natural wood finishes, upholstered seating, and dense plant clusters as
+            natural dividers. Avoid bare concrete, bright glossy metals, or synthetic color accents. The texture must
+            feel organic.</p>
+        </div>
+        <div class="card interior-card">
+          <div class="interior-icon">☕</div>
+          <h3 class="interior-title">The Welcome Counter</h3>
+          <p class="interior-desc">The coffee counter is visually highlighted near the entrance. It acts as our welcome
+            station—reinforcing that while focus is the product, a premium filter coffee or chai is the welcome
+            handshake.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Layout & Spatial Zones Section -->
+    <section id="layout">
+      <div class="section-header">
+        <div class="eyebrow">12 — SPATIAL ZONES</div>
+        <h2 class="section-title">OFFEE Space Layout</h2>
+        <p class="section-desc">To foster dynamic productivity, our flagship locations are split into distinct
+          functional zones. Seating is shared and unassigned, letting users adjust their position according to their
+          workflow.</p>
+      </div>
+
+      <div class="card">
+        <!-- Zone 1 -->
+        <div class="zone-row">
+          <div class="zone-badge">🎯</div>
+          <div class="zone-info">
+            <h4>Focus Area</h4>
+            <p>Low ambient noise. Dedicated to individual heads-down work. Visual barriers and acoustic shielding are
+              prioritized. Calls and voice notes are discouraged here.</p>
+          </div>
+          <div class="zone-meta">
+            <div class="zone-cap">~16 Seats</div>
+            <div class="zone-lbl">Recommended</div>
+          </div>
+        </div>
+
+        <!-- Zone 2 -->
+        <div class="zone-row">
+          <div class="zone-badge">💬</div>
+          <div class="zone-info">
+            <h4>Collaboration Area</h4>
+            <p>Spacious shared tables. Designed for team meetings, casual reviews, and light networking. Moderate volume
+              conversations are warmly welcomed.</p>
+          </div>
+          <div class="zone-meta">
+            <div class="zone-cap">~12 Seats</div>
+            <div class="zone-lbl">Recommended</div>
+          </div>
+        </div>
+
+        <!-- Zone 3 -->
+        <div class="zone-row">
+          <div class="zone-badge">🛋️</div>
+          <div class="zone-info">
+            <h4>Lounge Area</h4>
+            <p>Plush armchairs and casual coffee tables. Ideal for reading, conceptual thinking, offline brainstorming,
+              or brief tablet sessions.</p>
+          </div>
+          <div class="zone-meta">
+            <div class="zone-cap">~8 Seats</div>
+            <div class="zone-lbl">Recommended</div>
+          </div>
+        </div>
+
+        <!-- Zone 4 -->
+        <div class="zone-row">
+          <div class="zone-badge">📞</div>
+          <div class="zone-info">
+            <h4>Call Corner</h4>
+            <p>Acoustically soundproofed phone boots or alcoves. Enables secure, noise-free client presentations and
+              internal team syncs without disrupting the general floor.</p>
+          </div>
+          <div class="zone-meta">
+            <div class="zone-cap">~4 Booths</div>
+            <div class="zone-lbl">Recommended</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Copywriting & Tone of Voice -->
+    <section id="voice">
+      <div class="section-header">
+        <div class="eyebrow">13 — TONE & COPYWRITING</div>
+        <h2 class="section-title">A Warm, Elevated Voice</h2>
+        <p class="section-desc">Our copywriting style balances premium hospitality with absolute professional clarity.
+          We speak with quiet confidence, avoiding excessive exclamation points or overly complex terminology.</p>
+      </div>
+
+      <div class="voice-grid">
+        <div class="voice-box">
+          <div class="voice-header">How We Introduce Our Concept</div>
+          <p class="voice-text">"We aren't a corporate office with a coffee machine, nor are we a loud cafe with cheap
+            Wi-Fi. We are a warm third space crafted deliberately for your focused work."</p>
+        </div>
+        <div class="voice-box">
+          <div class="voice-header">How We Explain Spatial Access</div>
+          <p class="voice-text">"You are checking into an intentional environment. Your day-pass handles connectivity,
+            power, and a silent permit to succeed. The welcome beverage is on us."</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- DOs & DONTs Rules -->
+    <section id="rules">
+      <div class="section-header">
+        <div class="eyebrow">14 — SPATIAL INTEGRITY RULES</div>
+        <h2 class="section-title">Brand Protection Standards</h2>
+        <p class="section-desc">Maintaining the sensory identity of OFFEE is vital. These strict guidelines prevent
+          dilution of our physical and visual brand elements.</p>
+      </div>
+
+      <div class="do-dont-grid">
+        <!-- DOs -->
+        <div class="rules-card do">
+          <div class="rules-title">
+            <span class="rule-icon">✓</span> Brand Directives (DO)
+          </div>
+          <div class="rule-item">
+            <span class="rule-icon">✓</span>
+            <div>Always position the architectural FF ligature as a premium brand asset with ample breathing room.</div>
+          </div>
+          <div class="rule-item">
+            <span class="rule-icon">✓</span>
+            <div>Use natural partition elements like wooden bookshelves, warm lighting gaps, or lush plant planters.
+            </div>
+          </div>
+          <div class="rule-item">
+            <span class="rule-icon">✓</span>
+            <div>Ensure power sockets and premium back-up routers are readily accessible at every single seat.</div>
+          </div>
+          <div class="rule-item">
+            <span class="rule-icon">✓</span>
+            <div>Implement diagonal color gradients at 135 degrees to preserve spatial texture on user interfaces.</div>
+          </div>
+        </div>
+
+        <!-- DONTs -->
+        <div class="rules-card dont">
+          <div class="rules-title">
+            <span class="rule-icon">✕</span> Spatial Violations (DON'T)
+          </div>
+          <div class="rule-item">
+            <span class="rule-icon">✕</span>
+            <div>Do not stretch, outline, or scale the brand marks unevenly across print media or signboards.</div>
+          </div>
+          <div class="rule-item">
+            <span class="rule-icon">✕</span>
+            <div>Never use generic office partition walls, cubicles, or institutional metal chairs inside the zone.
+            </div>
+          </div>
+          <div class="rule-item">
+            <span class="rule-icon">✕</span>
+            <div>Do not treat OFFEE as a general coffee house. Spatial access is strictly paid, focused, and verified.
+            </div>
+          </div>
+          <div class="rule-item">
+            <span class="rule-icon">✕</span>
+            <div>Avoid flat, high-contrast, pure-primary colors. The visual pallet must remain warm, muted, and cozy.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Interactive Active State Script -->
+  <script>
+    // Handle Navigation Highlight & Scrolling
+    const sections = document.querySelectorAll('main > div, main > section');
+    const navLinks = document.querySelectorAll('aside .nav-menu a');
+
+    window.addEventListener('scroll', () => {
+      let currentSection = "";
+
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+        if (pageYOffset >= (sectionTop - 120)) {
+          currentSection = section.getAttribute('id');
+        }
+      });
+
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === `#${currentSection}`) {
+          link.classList.add('active');
+        }
+      });
+    });
+  </script>
+
+</body>
+
+</html>

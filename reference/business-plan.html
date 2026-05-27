@@ -1,0 +1,3023 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OFFEE — Business Plan 2026</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Sora:wght@300;400;600;700&display=swap"
+    rel="stylesheet">
+  <style>
+    :root {
+      --black: #1A1A1A;
+      --cream: #E7DCC6;
+      --brown: #7B5E3C;
+      --green: #4D5A43;
+      --gray: #8B8B8B;
+      --gold: #C9A96E;
+      --surface: #242424;
+      --surface2: #2E2E2E;
+      --border: rgba(231, 220, 198, 0.12);
+      --border-strong: rgba(231, 220, 198, 0.25);
+      --font-display: 'Sora', sans-serif;
+      --font-body: 'Poppins', sans-serif;
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0
+    }
+
+    html {
+      scroll-behavior: smooth
+    }
+
+    body {
+      background: var(--black);
+      color: var(--cream);
+      font-family: var(--font-body);
+      font-size: 15px;
+      line-height: 1.75;
+      -webkit-font-smoothing: antialiased
+    }
+
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      background: rgba(26, 26, 26, 0.93);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      padding: 0 40px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between
+    }
+
+    .nav-logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .nav-logo img {
+      height: 34px;
+      width: auto;
+      display: block;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 24px;
+      flex-wrap: wrap
+    }
+
+    .nav-links a {
+      font-size: 10px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--gray);
+      text-decoration: none;
+      transition: color 0.2s
+    }
+
+    .nav-links a:hover {
+      color: var(--cream)
+    }
+
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 100px 40px 60px;
+      position: relative;
+      overflow: hidden
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 60% 50% at 50% 60%, rgba(123, 94, 60, 0.15), transparent);
+      pointer-events: none
+    }
+
+    .hero-tag {
+      display: inline-block;
+      font-size: 10px;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--gold);
+      border: 1px solid rgba(201, 169, 110, 0.4);
+      padding: 6px 18px;
+      border-radius: 2px;
+      margin-bottom: 40px
+    }
+
+    .hero h1 {
+      font-family: var(--font-display);
+      font-size: clamp(72px, 14vw, 140px);
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      line-height: 0.9;
+      color: var(--cream);
+      margin-bottom: 30px
+    }
+
+    .hero-sub {
+      font-size: 11px;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--gray);
+      margin-bottom: 50px
+    }
+
+    .hero-divider {
+      width: 40px;
+      height: 1px;
+      background: var(--gold);
+      margin: 0 auto 50px
+    }
+
+    .hero-stats {
+      display: flex;
+      gap: 50px;
+      justify-content: center;
+      flex-wrap: wrap
+    }
+
+    .hero-stat {
+      text-align: center
+    }
+
+    .hero-stat .num {
+      font-family: var(--font-display);
+      font-size: 32px;
+      font-weight: 700;
+      color: var(--gold);
+      display: block
+    }
+
+    .hero-stat .lbl {
+      font-size: 10px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gray)
+    }
+
+    section {
+      padding: 100px 0;
+      border-bottom: 1px solid var(--border)
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 40px
+    }
+
+    .section-eyebrow {
+      font-size: 10px;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 16px
+    }
+
+    .section-title {
+      font-family: var(--font-display);
+      font-size: clamp(28px, 4vw, 42px);
+      font-weight: 700;
+      color: var(--cream);
+      line-height: 1.15;
+      margin-bottom: 20px
+    }
+
+    .section-lead {
+      font-size: 15px;
+      color: var(--gray);
+      max-width: 640px;
+      line-height: 1.85;
+      margin-bottom: 60px
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 32px
+    }
+
+    .card-gold {
+      border-color: rgba(201, 169, 110, 0.35)
+    }
+
+    .card-green {
+      border-color: rgba(77, 90, 67, 0.5);
+      background: rgba(77, 90, 67, 0.12)
+    }
+
+    .card-track {
+      border-color: rgba(201, 169, 110, 0.4);
+      background: linear-gradient(135deg, var(--surface2), var(--surface))
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 20px
+    }
+
+    .grid-4 {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px
+    }
+
+    .brand-palette {
+      display: flex;
+      gap: 16px;
+      align-items: flex-end;
+      margin-bottom: 40px;
+      flex-wrap: wrap
+    }
+
+    .swatch {
+      border-radius: 2px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px
+    }
+
+    .swatch-circle {
+      width: 54px;
+      height: 54px;
+      border-radius: 50%;
+      border: 1px solid var(--border)
+    }
+
+    .swatch-label {
+      font-size: 10px;
+      letter-spacing: 0.1em;
+      color: var(--gray);
+      text-align: center
+    }
+
+    .problem-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 20px
+    }
+
+    .problem-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 28px 24px;
+      position: relative;
+      overflow: hidden
+    }
+
+    .problem-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: var(--gold);
+      opacity: 0.4
+    }
+
+    .problem-num {
+      font-family: var(--font-display);
+      font-size: 48px;
+      font-weight: 700;
+      color: rgba(201, 169, 110, 0.15);
+      line-height: 1;
+      margin-bottom: 12px
+    }
+
+    .problem-title {
+      font-weight: 600;
+      font-size: 14px;
+      color: var(--cream);
+      margin-bottom: 10px;
+      letter-spacing: 0.05em
+    }
+
+    .problem-desc {
+      font-size: 13px;
+      color: var(--gray);
+      line-height: 1.75
+    }
+
+    .concept-comparison {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      overflow: hidden;
+      margin-bottom: 40px
+    }
+
+    .concept-col {
+      padding: 36px 32px
+    }
+
+    .concept-col.bad {
+      background: var(--surface)
+    }
+
+    .concept-col.good {
+      background: rgba(77, 90, 67, 0.25)
+    }
+
+    .concept-divider {
+      border-left: 1px solid var(--border);
+      border-right: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 20px;
+      background: var(--surface);
+      font-family: var(--font-display);
+      font-size: 11px;
+      letter-spacing: 0.2em;
+      color: var(--gold);
+      writing-mode: vertical-rl;
+      text-transform: uppercase
+    }
+
+    .concept-label {
+      font-size: 10px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      margin-bottom: 20px
+    }
+
+    .concept-label.bad {
+      color: var(--gray)
+    }
+
+    .concept-label.good {
+      color: var(--gold)
+    }
+
+    .concept-item {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+      margin-bottom: 12px;
+      font-size: 13px
+    }
+
+    .x {
+      color: #c0392b;
+      margin-top: 2px;
+      font-size: 16px;
+      flex-shrink: 0
+    }
+
+    .ck {
+      color: #7dcea0;
+      margin-top: 2px;
+      font-size: 16px;
+      flex-shrink: 0
+    }
+
+    .zone-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      margin-bottom: 40px
+    }
+
+    .zone-card {
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 24px 20px;
+      background: var(--surface);
+      text-align: center
+    }
+
+    .zone-icon {
+      font-size: 28px;
+      margin-bottom: 12px
+    }
+
+    .zone-name {
+      font-weight: 600;
+      font-size: 13px;
+      color: var(--cream);
+      margin-bottom: 6px
+    }
+
+    .zone-seats {
+      font-size: 24px;
+      font-family: var(--font-display);
+      font-weight: 700;
+      color: var(--gold);
+      margin-bottom: 4px
+    }
+
+    .zone-desc {
+      font-size: 12px;
+      color: var(--gray)
+    }
+
+    /* TABS shared */
+    .tab-bar {
+      display: flex;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      overflow: hidden;
+      width: fit-content;
+      margin-bottom: 32px
+    }
+
+    .tab-btn {
+      padding: 10px 26px;
+      font-size: 11px;
+      font-family: var(--font-body);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      background: none;
+      border: none;
+      color: var(--gray);
+      cursor: pointer;
+      transition: all 0.2s
+    }
+
+    .tab-btn.active {
+      background: var(--gold);
+      color: var(--black);
+      font-weight: 600
+    }
+
+    .tab-panel {
+      display: none
+    }
+
+    .tab-panel.active {
+      display: block
+    }
+
+    /* PRICING */
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin-bottom: 32px
+    }
+
+    .price-card {
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 32px 28px;
+      background: var(--surface);
+      position: relative
+    }
+
+    .price-card.featured {
+      border-color: rgba(201, 169, 110, 0.5);
+      background: linear-gradient(145deg, var(--surface2), var(--surface))
+    }
+
+    .price-card.featured::before {
+      content: 'MOST POPULAR';
+      position: absolute;
+      top: -1px;
+      right: 24px;
+      font-size: 9px;
+      letter-spacing: 0.2em;
+      background: var(--gold);
+      color: var(--black);
+      font-weight: 600;
+      padding: 4px 12px;
+      border-radius: 0 0 3px 3px
+    }
+
+    .price-tier {
+      font-size: 10px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gray);
+      margin-bottom: 10px
+    }
+
+    .price-amount {
+      font-family: var(--font-display);
+      font-size: 38px;
+      font-weight: 700;
+      color: var(--cream);
+      line-height: 1;
+      margin-bottom: 6px
+    }
+
+    .price-period {
+      font-size: 12px;
+      color: var(--gray);
+      margin-bottom: 8px
+    }
+
+    .price-per {
+      font-size: 12px;
+      color: var(--gold);
+      margin-bottom: 20px;
+      font-weight: 500
+    }
+
+    .price-was {
+      font-size: 12px;
+      color: var(--gray);
+      text-decoration: line-through;
+      margin-bottom: 4px
+    }
+
+    .price-save {
+      font-size: 11px;
+      color: #7dcea0;
+      font-weight: 600;
+      margin-bottom: 20px
+    }
+
+    .price-features {
+      list-style: none
+    }
+
+    .price-features li {
+      font-size: 13px;
+      color: var(--gray);
+      padding: 7px 0;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      gap: 10px
+    }
+
+    .price-features li:last-child {
+      border-bottom: none
+    }
+
+    .price-features li .ck {
+      color: #7dcea0;
+      margin-top: 1px;
+      flex-shrink: 0;
+      font-size: 14px
+    }
+
+    .pricing-note {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 20px 24px;
+      font-size: 13px;
+      color: var(--gray)
+    }
+
+    /* UNIT ECONOMICS */
+    .econ-controls {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 24px;
+      margin-bottom: 36px
+    }
+
+    .ctrl-group label {
+      display: block;
+      font-size: 10px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 10px
+    }
+
+    .ctrl-group input[type=range] {
+      -webkit-appearance: none;
+      width: 100%;
+      height: 2px;
+      background: var(--border-strong);
+      outline: none;
+      border-radius: 1px;
+      margin-bottom: 6px
+    }
+
+    .ctrl-group input[type=range]::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background: var(--gold);
+      cursor: pointer
+    }
+
+    .ctrl-val {
+      font-family: var(--font-display);
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--cream)
+    }
+
+    .metric-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      margin-bottom: 36px
+    }
+
+    .metric-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 22px 20px
+    }
+
+    .metric-label {
+      font-size: 10px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--gray);
+      margin-bottom: 8px
+    }
+
+    .metric-val {
+      font-family: var(--font-display);
+      font-size: 26px;
+      font-weight: 700
+    }
+
+    .metric-val.pos {
+      color: #7dcea0
+    }
+
+    .metric-val.neg {
+      color: #e74c3c
+    }
+
+    .metric-val.neu {
+      color: var(--cream)
+    }
+
+    .metric-val.gold {
+      color: var(--gold)
+    }
+
+    .pl-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px
+    }
+
+    .pl-table th {
+      text-align: left;
+      font-size: 10px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--gray);
+      padding: 12px 16px;
+      border-bottom: 1px solid var(--border);
+      font-weight: 400
+    }
+
+    .pl-table td {
+      padding: 11px 16px;
+      border-bottom: 1px solid var(--border);
+      color: var(--gray)
+    }
+
+    .pl-table tr:last-child td {
+      border-bottom: none
+    }
+
+    .pl-table .row-total td {
+      color: var(--cream);
+      font-weight: 600;
+      background: var(--surface2);
+      border-top: 1px solid var(--border-strong)
+    }
+
+    .pl-table td:last-child,
+    .pl-table th:last-child {
+      text-align: right
+    }
+
+    .cost-bar-wrap {
+      height: 4px;
+      background: var(--border);
+      border-radius: 2px;
+      margin-top: 4px;
+      overflow: hidden
+    }
+
+    .cost-bar {
+      height: 100%;
+      border-radius: 2px;
+      background: var(--gold);
+      transition: width 0.3s
+    }
+
+    /* SETUP COST */
+    .setup-item {
+      display: grid;
+      grid-template-columns: 1fr auto auto;
+      gap: 16px;
+      align-items: center;
+      padding: 14px 0;
+      border-bottom: 1px solid var(--border)
+    }
+
+    .setup-item:last-child {
+      border-bottom: none
+    }
+
+    .setup-item-name {
+      font-size: 14px;
+      color: var(--cream)
+    }
+
+    .setup-item-note {
+      font-size: 11px;
+      color: var(--gray);
+      margin-top: 2px
+    }
+
+    .setup-input {
+      background: var(--surface2);
+      border: 1px solid var(--border-strong);
+      border-radius: 3px;
+      color: var(--cream);
+      font-family: var(--font-body);
+      font-size: 14px;
+      padding: 6px 12px;
+      width: 130px;
+      text-align: right
+    }
+
+    .setup-input:focus {
+      outline: none;
+      border-color: var(--gold)
+    }
+
+    .setup-total-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 0 0;
+      border-top: 2px solid var(--border-strong);
+      margin-top: 8px
+    }
+
+    .setup-total-label {
+      font-size: 12px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--gray)
+    }
+
+    .setup-total-val {
+      font-family: var(--font-display);
+      font-size: 28px;
+      font-weight: 700;
+      color: var(--gold)
+    }
+
+    /* FRANCHISE */
+    .flow-row {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px
+    }
+
+    .flow-box {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 20px 24px;
+      flex: 1;
+      text-align: center
+    }
+
+    .flow-box.hq {
+      border-color: rgba(201, 169, 110, 0.4)
+    }
+
+    .flow-arrow {
+      flex-shrink: 0;
+      text-align: center;
+      padding: 0 14px;
+      color: var(--gold);
+      font-size: 20px
+    }
+
+    .flow-amount {
+      font-family: var(--font-display);
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--gold)
+    }
+
+    .flow-label {
+      font-size: 10px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--gray);
+      margin-top: 4px
+    }
+
+    .franchise-split {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      margin-bottom: 40px
+    }
+
+    /* TRACK B */
+    .trackb-flow {
+      display: grid;
+      grid-template-columns: 1fr 40px 1fr 40px 1fr;
+      gap: 0;
+      align-items: center;
+      margin-bottom: 24px
+    }
+
+    .trackb-box {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 20px 16px;
+      text-align: center
+    }
+
+    .trackb-box.cafe {
+      border-color: rgba(77, 90, 67, 0.5);
+      background: rgba(77, 90, 67, 0.12)
+    }
+
+    .trackb-box.offee {
+      border-color: rgba(201, 169, 110, 0.4)
+    }
+
+    .trackb-arrow {
+      text-align: center;
+      color: var(--gold);
+      font-size: 20px
+    }
+
+    .trackb-amount {
+      font-family: var(--font-display);
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--gold)
+    }
+
+    .trackb-label {
+      font-size: 10px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gray);
+      margin-top: 4px;
+      line-height: 1.4
+    }
+
+    .concern-item {
+      padding: 16px 20px;
+      border-bottom: 1px solid var(--border);
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 16px;
+      align-items: start
+    }
+
+    .concern-item:last-child {
+      border-bottom: none
+    }
+
+    .concern-q {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--cream);
+      margin-bottom: 6px
+    }
+
+    .concern-a {
+      font-size: 13px;
+      color: var(--gray);
+      line-height: 1.7
+    }
+
+    /* ROADMAP */
+    .roadmap {
+      position: relative;
+      padding-left: 40px
+    }
+
+    .roadmap::before {
+      content: '';
+      position: absolute;
+      left: 8px;
+      top: 12px;
+      bottom: 12px;
+      width: 1px;
+      background: linear-gradient(to bottom, var(--gold), transparent)
+    }
+
+    .rm-item {
+      position: relative;
+      margin-bottom: 48px
+    }
+
+    .rm-item::before {
+      content: '';
+      position: absolute;
+      left: -35px;
+      top: 6px;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--gold);
+      border: 2px solid var(--black);
+      box-shadow: 0 0 0 4px rgba(201, 169, 110, 0.2)
+    }
+
+    .rm-phase {
+      font-size: 10px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 6px
+    }
+
+    .rm-title {
+      font-family: var(--font-display);
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--cream);
+      margin-bottom: 14px
+    }
+
+    .rm-items {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px
+    }
+
+    .rm-tag {
+      font-size: 12px;
+      border: 1px solid var(--border);
+      padding: 5px 14px;
+      border-radius: 2px;
+      color: var(--gray)
+    }
+
+    /* RISK */
+    .risk-item {
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 22px 24px;
+      margin-bottom: 12px;
+      background: var(--surface);
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 20px;
+      align-items: start
+    }
+
+    .risk-title {
+      font-weight: 600;
+      font-size: 14px;
+      color: var(--cream);
+      margin-bottom: 8px
+    }
+
+    .risk-mitigation {
+      font-size: 13px;
+      color: var(--gray);
+      line-height: 1.7
+    }
+
+    .risk-badge {
+      font-size: 10px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      padding: 4px 12px;
+      border-radius: 2px;
+      font-weight: 600;
+      white-space: nowrap
+    }
+
+    .risk-h {
+      background: rgba(231, 76, 60, 0.15);
+      color: #e74c3c
+    }
+
+    .risk-m {
+      background: rgba(243, 156, 18, 0.15);
+      color: #f39c12
+    }
+
+    .risk-l {
+      background: rgba(125, 206, 160, 0.15);
+      color: #7dcea0
+    }
+
+    .checkin-example {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-bottom: 20px
+    }
+
+    .loc-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 20px;
+      text-align: center
+    }
+
+    .loc-name {
+      font-weight: 600;
+      font-size: 14px;
+      color: var(--cream);
+      margin-bottom: 4px
+    }
+
+    .loc-days {
+      font-size: 12px;
+      color: var(--gray);
+      margin-bottom: 10px
+    }
+
+    .loc-earn {
+      font-family: var(--font-display);
+      font-size: 24px;
+      font-weight: 700;
+      color: #7dcea0
+    }
+
+    .loc-pct {
+      font-size: 11px;
+      color: var(--gray)
+    }
+
+    footer {
+      background: var(--surface);
+      border-top: 1px solid var(--border);
+      padding: 60px 40px;
+      text-align: center
+    }
+
+    .footer-logo {
+      font-family: var(--font-display);
+      font-size: 32px;
+      font-weight: 700;
+      letter-spacing: 0.3em;
+      color: var(--cream);
+      margin-bottom: 10px
+    }
+
+    .footer-tag {
+      font-size: 11px;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--gray);
+      margin-bottom: 40px
+    }
+
+    .footer-note {
+      font-size: 12px;
+      color: var(--gray);
+      opacity: 0.5
+    }
+
+    .info-box {
+      padding: 16px 20px;
+      border-radius: 4px;
+      font-size: 13px;
+      color: var(--gray);
+      line-height: 1.8;
+      margin-top: 16px
+    }
+
+    .info-gold {
+      background: rgba(201, 169, 110, 0.08);
+      border: 1px solid rgba(201, 169, 110, 0.25)
+    }
+
+    .info-green {
+      background: rgba(77, 90, 67, 0.15);
+      border: 1px solid rgba(77, 90, 67, 0.4)
+    }
+
+    @media(max-width:768px) {
+
+      .grid-2,
+      .grid-3,
+      .grid-4,
+      .problem-grid,
+      .zone-grid,
+      .pricing-grid,
+      .metric-grid,
+      .econ-controls,
+      .checkin-example,
+      .franchise-split {
+        grid-template-columns: 1fr
+      }
+
+      .concept-comparison {
+        grid-template-columns: 1fr
+      }
+
+      .concept-divider {
+        writing-mode: horizontal-tb;
+        padding: 16px;
+        border: none;
+        border-top: 1px solid var(--border);
+        border-bottom: 1px solid var(--border)
+      }
+
+      .nav-links {
+        display: none
+      }
+
+      .flow-row {
+        flex-direction: column
+      }
+
+      .trackb-flow {
+        grid-template-columns: 1fr;
+        gap: 8px
+      }
+
+      .trackb-arrow {
+        transform: rotate(90deg)
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav>
+    <div class="nav-logo"><img src="logo-light.png" alt="OFFEE"></div>
+    <div class="nav-links">
+      <a href="#summary">Summary</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#economics">Economics</a>
+      <a href="#tracka">Track A</a>
+      <a href="#trackb">Track B</a>
+      <a href="#atmosphere">Atmosphere</a>
+      <a href="#habit">Ritual</a>
+      <a href="#setup">Setup Cost</a>
+      <a href="#roadmap">Roadmap</a>
+      <a href="#risks">Risks</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" style="border-bottom:1px solid var(--border)">
+    <div>
+      <div class="hero-tag">Business Plan · 2026 – 2030</div>
+      <h1 style="font-size:0;line-height:0;margin:0"><img src="logo-word-light.png" alt="OFFEE" style="height:clamp(60px,10vw,120px);width:auto;margin-bottom:30px"></h1>
+      <div class="hero-divider"></div>
+      <p class="hero-sub">A hospitality-powered productivity environment · offee.space</p>
+      <div class="hero-stats">
+        <div class="hero-stat"><span class="num">Track A</span><span class="lbl">Flagship OFFEE environments</span></div>
+        <div class="hero-stat"><span class="num">Track B</span><span class="lbl">Distributed workspace network · demand discovery</span></div>
+        <div class="hero-stat"><span class="num">Pilot</span><span class="lbl">Perinthalmanna · 2026</span></div>
+        <div class="hero-stat"><span class="num">Vision</span><span class="lbl">South India + Dubai</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 01 EXECUTIVE SUMMARY -->
+  <section id="summary">
+    <div class="container">
+      <div class="section-eyebrow">01 — Executive Summary</div>
+      <h2 class="section-title">A hospitality-powered productivity environment</h2>
+      <p class="section-lead">OFFEE is not a coworking company. It is a hospitality brand that takes productivity seriously. People are not paying for coffee — they are paying for the legitimacy to stay, the psychological separation from home, and an atmosphere that makes focused work feel intentional. The product is the environment. The drink is the welcome. OFFEE pilots as a standalone flagship in Perinthalmanna, with Track B — a distributed workspace network — validating demand inside partner cafés before capital-intensive expansion.</p>
+      <div class="grid-2">
+        <div class="card">
+          <div class="section-eyebrow" style="margin-bottom:14px">The validated insight</div>
+          <p style="font-size:14px;color:var(--gray);line-height:1.85;margin-bottom:16px">Early conversations have
+            confirmed: people want to work outside the office at least one day a week, <strong
+              style="color:var(--cream)">₹500/head/day feels fair</strong>, and the space must feel <strong
+              style="color:var(--cream)">"warm and cozy"</strong> — not corporate. That last point is not a stylistic
+            preference. It is the product brief.</p>
+          <p style="font-size:14px;color:var(--gray);line-height:1.85">Perinthalmanna has no direct competition in this
+            format. The pilot will validate demand, pricing, and operating rhythms before any replication decisions are
+            made.</p>
+        </div>
+        <div class="card">
+          <div class="section-eyebrow" style="margin-bottom:14px">What OFFEE is built on</div>
+          <div style="display:flex;flex-direction:column;gap:12px">
+            <div class="concept-item"><span class="ck">✓</span><span
+                style="font-size:13px;color:var(--gray)">Atmosphere as infrastructure — warmth, spatial flow, and work-suitability are the product</span></div>
+            <div class="concept-item"><span class="ck">✓</span><span
+                style="font-size:13px;color:var(--gray)">Intentional workspace access — structured OFFEE Zones, not open café corners</span></div>
+            <div class="concept-item"><span class="ck">✓</span><span style="font-size:13px;color:var(--gray)">Lean pilot — WhatsApp + Razorpay, zero tech overhead at launch</span></div>
+            <div class="concept-item"><span class="ck">✓</span><span style="font-size:13px;color:var(--gray)">Track A as the flagship vision — Track B as the distributed network and demand discovery layer</span></div>
+            <div class="concept-item"><span class="ck">✓</span><span
+                style="font-size:13px;color:var(--gray)">Validation-first discipline — scale only what the numbers confirm</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 02 PROBLEM -->
+  <section id="problem">
+    <div class="container">
+      <div class="section-eyebrow">02 — The Problem</div>
+      <h2 class="section-title">Three broken options for modern workers</h2>
+      <p class="section-lead">The Indian knowledge workforce is increasingly hybrid. Freelancers, remote employees,
+        consultants, solopreneurs — they all share the same quiet frustration. Every existing option fails them in a
+        different way.</p>
+      <div class="problem-grid">
+        <div class="problem-card">
+          <div class="problem-num">01</div>
+          <div class="problem-title">Home</div>
+          <div class="problem-desc">Distracting, isolating, and psychologically ambiguous. When your bedroom is also
+            your office, neither rest nor work feels complete. Productivity suffers quietly.</div>
+        </div>
+        <div class="problem-card">
+          <div class="problem-num">02</div>
+          <div class="problem-title">Corporate co-working</div>
+          <div class="problem-desc">Cold, sterile, and designed for companies. The infrastructure exists but the
+            atmosphere does not. Long lock-ins, badge-access vibes, and a price point that assumes a business expense
+            account.</div>
+        </div>
+        <div class="problem-card">
+          <div class="problem-num">03</div>
+          <div class="problem-title">Cafés</div>
+          <div class="problem-desc">The atmosphere is right but everything else is wrong. Unreliable connectivity, no
+            power access, seating designed for an hour — not a working day. And the quiet guilt of "café squatting" when
+            the bill is just one coffee.</div>
+        </div>
+      </div>
+      <div
+        style="margin-top:40px;padding:32px;background:var(--surface);border:1px solid rgba(201,169,110,0.3);border-radius:4px;text-align:center">
+        <div
+          style="font-family:var(--font-display);font-size:22px;font-weight:700;color:var(--cream);margin-bottom:12px">
+          Nobody has solved the middle ground.</div>
+        <div style="font-size:14px;color:var(--gray);max-width:620px;margin:0 auto">OFFEE is not a better café. It is
+          not a softer coworking space. It is a deliberate environment designed for productive work — warm enough to
+          stay, equipped enough to work, and honest enough that you have paid to be there. The atmosphere is the
+          product. The drink is just the welcome.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 02B CORE ECONOMIC SHIFT -->
+  <section id="economic-shift">
+    <div class="container">
+      <div class="section-eyebrow">02b — The Core Economic Shift</div>
+      <h2 class="section-title">From ambiguous occupancy to structured recurring revenue</h2>
+      <p class="section-lead">The most important thing OFFEE does is not create a new workspace format. It transforms something that already exists — long-stay laptop occupancy — from a low-value, ambiguous problem into a structured, recurring revenue model.</p>
+      <div class="concept-comparison">
+        <div class="concept-col bad">
+          <div class="concept-label bad">Traditional café monetises</div>
+          <div class="concept-item"><span class="x">✕</span><span style="font-size:13px;color:var(--gray)">Beverages — sold by the cup</span></div>
+          <div class="concept-item"><span class="x">✕</span><span style="font-size:13px;color:var(--gray)">Table turnover — optimised for short stays</span></div>
+          <div class="concept-item"><span class="x">✕</span><span style="font-size:13px;color:var(--gray)">Long-stay users are a cost, not an asset</span></div>
+          <div class="concept-item"><span class="x">✕</span><span style="font-size:13px;color:var(--gray)">Occupancy is informal, unpredictable</span></div>
+        </div>
+        <div class="concept-divider">OFFEE</div>
+        <div class="concept-col good">
+          <div class="concept-label good">OFFEE monetises</div>
+          <div class="concept-item"><span class="ck">✓</span><span style="font-size:13px;color:var(--gray)">Intentional workspace access — sold as sessions</span></div>
+          <div class="concept-item"><span class="ck">✓</span><span style="font-size:13px;color:var(--gray)">Productive dwell time — the longer they stay, the more they value it</span></div>
+          <div class="concept-item"><span class="ck">✓</span><span style="font-size:13px;color:var(--gray)">Repeat work habits — building a loyal, weekly user base</span></div>
+          <div class="concept-item"><span class="ck">✓</span><span style="font-size:13px;color:var(--gray)">Atmosphere utilisation — the environment itself becomes the revenue driver</span></div>
+        </div>
+      </div>
+      <div style="padding:24px 28px;background:var(--surface);border:1px solid rgba(201,169,110,0.3);border-radius:4px">
+        <div style="font-size:10px;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);margin-bottom:12px">The investor-intelligent insight</div>
+        <div style="font-size:14px;color:var(--gray);line-height:1.85">OFFEE does not fight the fact that modern knowledge workers prefer long-stay environments. It <strong style="color:var(--cream)">structures that behaviour into predictable revenue</strong>. Monthly access members provide a recurring revenue floor. Day-pass users provide occupancy yield. F&amp;B spend is incremental. Every long stay becomes a business asset — not a management headache.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 03 BRAND -->
+  <section id="brand">
+    <div class="container">
+      <div class="section-eyebrow">03 — Brand Identity</div>
+      <h2 class="section-title">Architectural warmth</h2>
+      <p class="section-lead">The FF ligature is OFFEE's signature — architectural, geometric, warm. The system scales
+        from a coffee cup sleeve to a building facade.</p>
+      <div class="card card-gold" style="margin-bottom:32px">
+        <div style="text-align:center;padding:48px 0;display:flex;flex-direction:column;align-items:center;gap:32px">
+          <img src="logo-word-light.png" alt="OFFEE" style="height:56px;width:auto">
+          <div style="display:flex;align-items:center;gap:32px">
+            <div style="width:40px;height:1px;background:var(--gold)"></div>
+            <img src="logo-light.png" alt="OFFEE mark" style="height:72px;width:auto;opacity:0.85">
+            <div style="width:40px;height:1px;background:var(--gold)"></div>
+          </div>
+          <div style="font-size:11px;letter-spacing:0.35em;text-transform:uppercase;color:var(--gray)">A WARM WORKSPACE OUTSIDE HOME</div>
+        </div>
+      </div>
+      <div class="grid-2" style="margin-bottom:32px">
+        <div class="card">
+          <div class="section-eyebrow" style="margin-bottom:20px">Colour palette</div>
+          <div class="brand-palette">
+            <div class="swatch">
+              <div class="swatch-circle" style="background:#1A1A1A;border:1px solid #333"></div>
+              <div class="swatch-label">#1A1A1A<br>Near Black</div>
+            </div>
+            <div class="swatch">
+              <div class="swatch-circle" style="background:#E7DCC6"></div>
+              <div class="swatch-label">#E7DCC6<br>Cream</div>
+            </div>
+            <div class="swatch">
+              <div class="swatch-circle" style="background:#7B5E3C"></div>
+              <div class="swatch-label">#7B5E3C<br>Brown</div>
+            </div>
+            <div class="swatch">
+              <div class="swatch-circle" style="background:#4D5A43"></div>
+              <div class="swatch-label">#4D5A43<br>Forest</div>
+            </div>
+            <div class="swatch">
+              <div class="swatch-circle" style="background:#8B8B8B"></div>
+              <div class="swatch-label">#8B8B8B<br>Warm Gray</div>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="section-eyebrow" style="margin-bottom:20px">Typography & domain</div>
+          <div style="margin-bottom:20px">
+            <div
+              style="font-size:10px;letter-spacing:0.15em;text-transform:uppercase;color:var(--gray);margin-bottom:8px">
+              Primary — Sora</div>
+            <div style="font-family:'Sora',sans-serif;font-size:36px;font-weight:700;color:var(--cream)">Aa</div>
+            <div style="font-size:12px;color:var(--gray);margin-top:4px">Clean · Modern · Architectural · Warm</div>
+          </div>
+          <div style="border-top:1px solid var(--border);padding-top:18px">
+            <div
+              style="font-size:10px;letter-spacing:0.15em;text-transform:uppercase;color:var(--gray);margin-bottom:8px">
+              Domain</div>
+            <div style="font-family:'Sora',sans-serif;font-size:22px;font-weight:600;color:var(--gold)">
+              https://offee.space</div>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="section-eyebrow" style="margin-bottom:20px">Interior design principles</div>
+        <div class="grid-3">
+          <div>
+            <div style="font-weight:600;font-size:13px;color:var(--cream);margin-bottom:8px">Lighting</div>
+            <div style="font-size:13px;color:var(--gray)">Warm Edison-style pendants. No harsh fluorescents. The light
+              should feel like late afternoon, always.</div>
+          </div>
+          <div>
+            <div style="font-weight:600;font-size:13px;color:var(--cream);margin-bottom:8px">Materials</div>
+            <div style="font-size:13px;color:var(--gray)">Warm wood tones. Upholstered seating. Plants as dividers.
+              Books on shelves. No bare concrete.</div>
+          </div>
+          <div>
+            <div style="font-weight:600;font-size:13px;color:var(--cream);margin-bottom:8px">The counter</div>
+            <div style="font-size:13px;color:var(--gray)">The coffee counter is visually prominent — it is part of the
+              brand identity, not a utility room.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 03B ATMOSPHERE AS INFRASTRUCTURE -->
+  <section id="atmosphere">
+    <div class="container">
+      <div class="section-eyebrow">03b — Atmosphere as Infrastructure</div>
+      <h2 class="section-title">Atmosphere is not decoration. It is the product.</h2>
+      <p class="section-lead">Every element of the OFFEE environment is an operational business decision. Lighting, seating density, sound profile, warmth, and spatial flow are not aesthetic choices — they are levers that directly influence dwell time, productivity, retention, and perceived value.</p>
+      <div class="grid-3" style="margin-bottom:32px">
+        <div class="card">
+          <div style="font-size:24px;margin-bottom:14px">💡</div>
+          <div style="font-weight:600;font-size:14px;color:var(--cream);margin-bottom:8px">Lighting</div>
+          <div style="font-size:13px;color:var(--gray);line-height:1.8">Warm, low-diffuse light signals psychological safety and reduces cognitive fatigue. OFFEE uses Edison-style pendants that make the room feel like late afternoon — always. This single decision increases average dwell time.</div>
+        </div>
+        <div class="card">
+          <div style="font-size:24px;margin-bottom:14px">🎵</div>
+          <div style="font-weight:600;font-size:14px;color:var(--cream);margin-bottom:8px">Sound profile</div>
+          <div style="font-size:13px;color:var(--gray);line-height:1.8">Ambient noise at the right level — not silence, not chaos — measurably improves creative focus. OFFEE curates a background sound environment that supports individual work without demanding silence.</div>
+        </div>
+        <div class="card">
+          <div style="font-size:24px;margin-bottom:14px">🪨</div>
+          <div style="font-weight:600;font-size:14px;color:var(--cream);margin-bottom:8px">Spatial flow</div>
+          <div style="font-size:13px;color:var(--gray);line-height:1.8">Seating density, zone separation, and sightlines are designed to feel generous without waste. Users should feel they have space to think — not space that is empty and clinical.</div>
+        </div>
+      </div>
+      <div style="padding:24px 28px;background:var(--surface);border:1px solid rgba(77,90,67,0.4);border-radius:4px">
+        <div style="font-size:10px;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);margin-bottom:12px">Why this matters operationally</div>
+        <div style="font-size:14px;color:var(--gray);line-height:1.85">A user who finds their work session productive will return. A user who returns regularly builds a ritual. Atmosphere is the mechanism that drives <strong style="color:var(--cream)">repeat visits, loyalty, and perceived value</strong> far more effectively than any loyalty programme or discount. OFFEE treats interior design as a revenue strategy, not a cost.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 04 CONCEPT -->
+  <section id="concept">
+    <div class="container">
+      <div class="section-eyebrow">04 — The Product</div>
+      <h2 class="section-title">A hospitality environment designed for productive dwell.</h2>
+      <p class="section-lead">OFFEE exists to give people a legitimate reason to be somewhere that is not home, without the cold formality of a traditional office. The workspace access window is intentional and paid. The atmosphere is curated. The drink is the welcome. What users are actually buying is focus, separation, and the psychological permission to work well — in a space built around that very intention.</p>
+
+      <div
+        style="padding:28px 32px;background:var(--surface);border:1px solid rgba(201,169,110,0.3);border-radius:4px;margin-bottom:40px">
+        <div style="font-size:10px;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);margin-bottom:18px">
+          What OFFEE users are paying for</div>
+        <div class="grid-3" style="gap:24px">
+          <div>
+            <div style="font-weight:600;font-size:13px;color:var(--cream);margin-bottom:8px">Intentional atmosphere
+            </div>
+            <div style="font-size:13px;color:var(--gray)">A space that is genuinely designed for productive work — not
+              repurposed, not makeshift. You feel it the moment you walk in.</div>
+          </div>
+          <div>
+            <div style="font-weight:600;font-size:13px;color:var(--cream);margin-bottom:8px">Legitimacy to stay</div>
+            <div style="font-size:13px;color:var(--gray)">No café guilt. No performance anxiety. You have checked in and
+              paid. The access window is intentional. That clarity changes how you work.</div>
+          </div>
+          <div>
+            <div style="font-weight:600;font-size:13px;color:var(--cream);margin-bottom:8px">Separation from home</div>
+            <div style="font-size:13px;color:var(--gray)">The commute is short. But it still counts. Leaving the house
+              to work somewhere warm and intentional is a daily psychological reset most remote workers are quietly
+              desperate for.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="concept-comparison">
+        <div class="concept-col bad">
+          <div class="concept-label bad">What OFFEE is not</div>
+          <div class="concept-item"><span class="x">✕</span><span style="font-size:13px;color:var(--gray)">A sterile
+              corporate co-working space</span></div>
+          <div class="concept-item"><span class="x">✕</span><span style="font-size:13px;color:var(--gray)">A café where
+              working feels like an imposition</span></div>
+          <div class="concept-item"><span class="x">✕</span><span style="font-size:13px;color:var(--gray)">A guaranteed
+              silent or perfect environment</span></div>
+          <div class="concept-item"><span class="x">✕</span><span style="font-size:13px;color:var(--gray)">A formal,
+              badge-access, dress-code space</span></div>
+        </div>
+        <div class="concept-divider">OFFEE</div>
+        <div class="concept-col good">
+          <div class="concept-label good">What OFFEE is</div>
+          <div class="concept-item"><span class="ck">✓</span><span style="font-size:13px;color:var(--gray)">A verified
+              work-friendly environment — warm, curated, consistently productive</span></div>
+          <div class="concept-item"><span class="ck">✓</span><span style="font-size:13px;color:var(--gray)">Reliable
+              connectivity and power access at every workspace</span></div>
+          <div class="concept-item"><span class="ck">✓</span><span style="font-size:13px;color:var(--gray)">A
+              complimentary drink on arrival — South Indian filter coffee or chai</span></div>
+          <div class="concept-item"><span class="ck">✓</span><span style="font-size:13px;color:var(--gray)">Flexible
+              access windows — a few hours or a full day, on your terms</span></div>
+        </div>
+      </div>
+
+      <h3 style="font-family:var(--font-display);font-size:18px;font-weight:600;color:var(--cream);margin-bottom:8px">
+        OFFEE Zone layout — 40-seat pilot</h3>
+      <p style="font-size:13px;color:var(--gray);margin-bottom:28px">The OFFEE Zone is a fluid, hospitality-led productivity environment. Seating is flexible — users move through the zone and choose a workspace section that matches their work style for that session. The experience feels like a premium café, not a cubicle assignment. The host space always retains full authority over its broader environment.</p>
+      <div class="zone-grid">
+        <div class="zone-card">
+          <div class="zone-icon">🎯</div>
+          <div class="zone-name">Focus Area</div>
+          <div class="zone-seats">~16</div>
+          <div style="font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:var(--gray);margin-bottom:8px">
+            capacity</div>
+          <div class="zone-desc">Low ambient sound. Suited for deep individual work. Voice calls discouraged.</div>
+        </div>
+        <div class="zone-card">
+          <div class="zone-icon">💬</div>
+          <div class="zone-name">Collab Area</div>
+          <div class="zone-seats">~12</div>
+          <div style="font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:var(--gray);margin-bottom:8px">
+            capacity</div>
+          <div class="zone-desc">Shared tables. Quiet conversation welcome. Good for team days and reviews.</div>
+        </div>
+        <div class="zone-card">
+          <div class="zone-icon">☕</div>
+          <div class="zone-name">Lounge Area</div>
+          <div class="zone-seats">~8</div>
+          <div style="font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:var(--gray);margin-bottom:8px">
+            capacity</div>
+          <div class="zone-desc">Softer seating. Casual work, reading, light laptop sessions.</div>
+        </div>
+        <div class="zone-card">
+          <div class="zone-icon">📞</div>
+          <div class="zone-name">Call Corner</div>
+          <div class="zone-seats">~4</div>
+          <div style="font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:var(--gray);margin-bottom:8px">
+            capacity</div>
+          <div class="zone-desc">Acoustically separated area for video calls. Bookable in advance.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 04B HABIT AND RITUAL -->
+  <section id="habit">
+    <div class="container">
+      <div class="section-eyebrow">04b — Habit &amp; Ritual</div>
+      <h2 class="section-title">Becoming part of the weekly work rhythm</h2>
+      <p class="section-lead">OFFEE's long-term retention does not come from discounts or loyalty points. It comes from becoming a familiar, trusted part of how a person structures their week. The goal is not just a repeat visit — it is a ritual.</p>
+      <div class="grid-2" style="margin-bottom:32px">
+        <div class="card card-gold">
+          <div class="section-eyebrow" style="margin-bottom:14px">The third-place identity</div>
+          <p style="font-size:14px;color:var(--gray);line-height:1.85;margin-bottom:14px">The concept of the “third place” — a space that is neither home nor office — is one of the most powerful forces in modern urban behaviour. Coffee shops became the default third place. OFFEE is designed to be the intentional one: a space where the transition from home to focus is clean, warm, and familiar.</p>
+          <p style="font-size:14px;color:var(--gray);line-height:1.85">The moment a user says “I work from OFFEE on Tuesdays and Thursdays” — OFFEE has become infrastructure in their life. That is the retention model.</p>
+        </div>
+        <div class="card">
+          <div class="section-eyebrow" style="margin-bottom:14px">What ritual looks like</div>
+          <div style="display:flex;flex-direction:column;gap:12px">
+            <div class="concept-item"><span class="ck">✓</span><span style="font-size:13px;color:var(--gray)">The same seat section, the same filter coffee, the same 9am check-in</span></div>
+            <div class="concept-item"><span class="ck">✓</span><span style="font-size:13px;color:var(--gray)">Familiarity with the space that removes decision fatigue on arrival</span></div>
+            <div class="concept-item"><span class="ck">✓</span><span style="font-size:13px;color:var(--gray)">A clear psychological separation between home and productive time</span></div>
+            <div class="concept-item"><span class="ck">✓</span><span style="font-size:13px;color:var(--gray)">A workspace identity — “I am someone who works intentionally”</span></div>
+            <div class="concept-item"><span class="ck">✓</span><span style="font-size:13px;color:var(--gray)">The monthly pass as a commitment to routine, not just access</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 05 PRICING -->
+  <section id="pricing">
+    <div class="container">
+      <div class="section-eyebrow">05 — Pricing Architecture</div>
+      <h2 class="section-title">Access without commitment</h2>
+      <p class="section-lead">OFFEE pricing is designed around a simple psychology: make it easy to try once, make it
+        rewarding to return, and make the monthly option feel like a smart habit. The price is not for coffee — it is
+        for the atmosphere, the intentional access, and the focus environment that makes real work feel possible outside
+        home. Track B access passes are intentionally lighter — designed for first-time experimentation without
+        overcommitting.</p>
+      <div class="tab-bar">
+        <button class="tab-btn active" onclick="switchTab('pricing','standard',this)">Track A pricing</button>
+        <button class="tab-btn" onclick="switchTab('pricing','trackb',this)">Track B pricing</button>
+        <button class="tab-btn" onclick="switchTab('pricing','corporate',this)">Corporate pricing</button>
+      </div>
+
+      <div id="pricing-standard" class="tab-panel active">
+        <div class="pricing-grid">
+          <div class="price-card">
+            <div class="price-tier">Full-Day Access</div>
+            <div class="price-amount">₹500</div>
+            <div class="price-period">walk-in · no booking required</div>
+            <div class="price-per">Best for first visits and irregular use</div>
+            <ul class="price-features">
+              <li><span class="ck">✓</span>OFFEE Zone access, 9am–9pm</li>
+              <li><span class="ck">✓</span>1 complimentary drink on arrival</li>
+              <li><span class="ck">✓</span>Reliable connectivity + power</li>
+              <li><span class="ck">✓</span>Dynamic seating across available areas</li>
+              <li><span class="ck">✓</span>No advance commitment required</li>
+            </ul>
+          </div>
+          <div class="price-card featured">
+            <div class="price-tier">10-Day Access Pack</div>
+            <div class="price-was">₹5,000 at full rate</div>
+            <div class="price-amount">₹4,650</div>
+            <div class="price-save">Save 7% · ₹465 per access day</div>
+            <div class="price-per">Credits valid 60 days · use at any OFFEE</div>
+            <ul class="price-features">
+              <li><span class="ck">✓</span>10 workspace access windows</li>
+              <li><span class="ck">✓</span>Usable across all OFFEE locations</li>
+              <li><span class="ck">✓</span>1 complimentary drink per visit</li>
+              <li><span class="ck">✓</span>Credits valid for 60 days</li>
+              <li><span class="ck">✓</span>Optional advance zone booking</li>
+            </ul>
+          </div>
+          <div class="price-card">
+            <div class="price-tier">Monthly Access</div>
+            <div class="price-amount">₹6,000</div>
+            <div class="price-period">per month · per person</div>
+            <div class="price-per">Unlimited days · all OFFEE locations</div>
+            <ul class="price-features">
+              <li><span class="ck">✓</span>Unlimited workspace access days</li>
+              <li><span class="ck">✓</span>All OFFEE locations included</li>
+              <li><span class="ck">✓</span>Priority zone booking</li>
+              <li><span class="ck">✓</span>2 guest access passes per month</li>
+              <li><span class="ck">✓</span>Drinks at standard F&amp;B menu price</li>
+            </ul>
+          </div>
+        </div>
+        <div class="pricing-note"><strong style="color:var(--cream)">On the monthly tier:</strong> No complimentary
+          drink is included — this keeps the margin clean and positions the monthly pass as a committed workspace
+          membership rather than an all-inclusive plan. Users at this level are regulars; they know what they want. The
+          ₹6,000 is for consistent, reliable access to a productive environment — nothing more, nothing less.</div>
+      </div>
+
+      <div id="pricing-trackb" class="tab-panel">
+        <div class="pricing-grid" style="grid-template-columns:repeat(4,1fr)">
+          <div class="price-card">
+            <div class="price-tier">Focus Pass</div>
+            <div class="price-amount">₹199</div>
+            <div class="price-period">2–3 hour access window</div>
+            <div class="price-per">Ideal for trying OFFEE for the first time</div>
+            <ul class="price-features">
+              <li><span class="ck">✓</span>OFFEE Zone access, 2–3 hours</li>
+              <li><span class="ck">✓</span>Flexible check-in, no advance booking</li>
+              <li><span class="ck">✓</span>Work-suitability verified location</li>
+              <li><span class="ck">✓</span>Connectivity + power at seat</li>
+            </ul>
+          </div>
+          <div class="price-card">
+            <div class="price-tier">Half-Day Pass</div>
+            <div class="price-amount">₹299</div>
+            <div class="price-period">up to 5 hours access</div>
+            <div class="price-per">A productive morning or afternoon session</div>
+            <ul class="price-features">
+              <li><span class="ck">✓</span>OFFEE Zone access, up to 5 hours</li>
+              <li><span class="ck">✓</span>Dynamic seating in the zone</li>
+              <li><span class="ck">✓</span>Reliable connectivity + power</li>
+              <li><span class="ck">✓</span>Work-suitability indicators visible</li>
+            </ul>
+          </div>
+          <div class="price-card featured">
+            <div class="price-tier">Full-Day Pass</div>
+            <div class="price-amount">₹449</div>
+            <div class="price-period">full-day access window</div>
+            <div class="price-per">Best suited where location supports all-day use</div>
+            <ul class="price-features">
+              <li><span class="ck">✓</span>OFFEE Zone access, full session</li>
+              <li><span class="ck">✓</span>Shared productive environment</li>
+              <li><span class="ck">✓</span>Connectivity + power at seat</li>
+              <li><span class="ck">✓</span>Subject to café's suitability rating</li>
+            </ul>
+          </div>
+          <div class="price-card">
+            <div class="price-tier">Monthly Lite</div>
+            <div class="price-amount">₹1,299</div>
+            <div class="price-period">per month</div>
+            <div class="price-per">8 half-day access credits across Track B zones</div>
+            <ul class="price-features">
+              <li><span class="ck">✓</span>8 half-day access windows / month</li>
+              <li><span class="ck">✓</span>Usable at any OFFEE Zone café</li>
+              <li><span class="ck">✓</span>Flexible check-in, no fixed seat</li>
+              <li><span class="ck">✓</span>Credits roll over for 30 days</li>
+            </ul>
+          </div>
+        </div>
+        <div class="pricing-note"><strong style="color:var(--cream)">Track B pricing philosophy:</strong> These passes
+          are lighter by design. Track B locations are verified work-friendly environments — but they are still shared
+          hospitality spaces, and the pricing reflects that honestly. The goal is to make the first OFFEE experience
+          easy to say yes to. People are paying for intentional access, a productive atmosphere, and the legitimacy to
+          work without guilt — not for a premium guarantee. Premium comes with Track A.</div>
+      </div>
+
+      <div id="pricing-corporate" class="tab-panel">
+        <div class="pricing-grid">
+          <div class="price-card">
+            <div class="price-tier">Team Access — Small</div>
+            <div class="price-amount">₹400</div>
+            <div class="price-period">per seat / day · 5–10 seats</div>
+            <div class="price-per">Invoiced monthly to company</div>
+            <ul class="price-features">
+              <li><span class="ck">✓</span>5–10 team access slots per day</li>
+              <li><span class="ck">✓</span>Drinks included for all</li>
+              <li><span class="ck">✓</span>Monthly GST invoice</li>
+              <li><span class="ck">✓</span>Priority collab zone access</li>
+            </ul>
+          </div>
+          <div class="price-card featured">
+            <div class="price-tier">Team Access — Medium</div>
+            <div class="price-amount">₹350</div>
+            <div class="price-period">per seat / day · 11–20 seats</div>
+            <div class="price-per">Volume discount · dedicated account manager</div>
+            <ul class="price-features">
+              <li><span class="ck">✓</span>11–20 team access slots per day</li>
+              <li><span class="ck">✓</span>₹100 F&amp;B credit/person included</li>
+              <li><span class="ck">✓</span>Custom invoicing + GST</li>
+              <li><span class="ck">✓</span>Branded zone identifier (not exclusive)</li>
+              <li><span class="ck">✓</span>Flexible days — no fixed commitment</li>
+            </ul>
+          </div>
+          <div class="price-card">
+            <div class="price-tier">Virtual Address</div>
+            <div class="price-amount">₹800</div>
+            <div class="price-period">per month / company</div>
+            <div class="price-per">Passive recurring revenue, near-zero cost</div>
+            <ul class="price-features">
+              <li><span class="ck">✓</span>Registered office address</li>
+              <li><span class="ck">✓</span>Mail handling + scanning</li>
+              <li><span class="ck">✓</span>GST registration eligible</li>
+              <li><span class="ck">✓</span>No physical presence required</li>
+            </ul>
+          </div>
+        </div>
+        <div class="pricing-note"><strong style="color:var(--cream)">Corporate approach:</strong> The pitch goes to HR
+          managers, not employees. Frame it as a satellite workspace benefit — companies reduce lease obligations,
+          employees gain flexibility. Seating is allocated per session within the OFFEE Zone, not permanently reserved.
+          No single corporate account should exceed 30% of any location's revenue. Start with 2–3 accounts to test
+          invoicing and retention before scaling.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 06 UNIT ECONOMICS -->
+  <section id="economics">
+    <div class="container">
+      <div class="section-eyebrow">06 — Unit Economics</div>
+      <h2 class="section-title">Pilot location P&amp;L model</h2>
+      <p class="section-lead">These are working estimates for the Perinthalmanna pilot — not projections. The purpose of
+        the pilot is to replace these estimates with real numbers. Adjust the sliders to model different scenarios
+        honestly.</p>
+      <div class="card" style="margin-bottom:32px">
+        <div class="econ-controls">
+          <div class="ctrl-group"><label>Total seats</label><input type="range" min="20" max="80" value="40" step="5"
+              id="e-seats" oninput="recalc()">
+            <div class="ctrl-val" id="v-seats">40</div>
+          </div>
+          <div class="ctrl-group"><label>Average daily occupancy</label><input type="range" min="15" max="95" value="50"
+              step="5" id="e-occ" oninput="recalc()">
+            <div class="ctrl-val" id="v-occ">50%</div>
+          </div>
+          <div class="ctrl-group"><label>Monthly rent (₹)</label><input type="range" min="20000" max="120000"
+              value="40000" step="5000" id="e-rent" oninput="recalc()">
+            <div class="ctrl-val" id="v-rent">₹40,000</div>
+          </div>
+        </div>
+        <div class="econ-controls" style="margin-bottom:0">
+          <div class="ctrl-group"><label>Average daily rate (₹/seat)</label><input type="range" min="300" max="700"
+              value="500" step="25" id="e-rate" oninput="recalc()">
+            <div class="ctrl-val" id="v-rate">₹500</div>
+          </div>
+          <div class="ctrl-group"><label>F&amp;B upsell rate</label><input type="range" min="5" max="35" value="18"
+              step="1" id="e-fb" oninput="recalc()">
+            <div class="ctrl-val" id="v-fb">18%</div>
+          </div>
+          <div class="ctrl-group"><label>Staff count</label><input type="range" min="1" max="5" value="2" step="1"
+              id="e-staff" oninput="recalc()">
+            <div class="ctrl-val" id="v-staff">2 people</div>
+          </div>
+        </div>
+      </div>
+      <div class="metric-grid" style="margin-bottom:24px">
+        <div class="metric-card">
+          <div class="metric-label">Gross revenue</div>
+          <div class="metric-val pos" id="m-rev">—</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-label">Total costs</div>
+          <div class="metric-val neg" id="m-cost">—</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-label">Net profit / loss</div>
+          <div class="metric-val" id="m-profit">—</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-label">Break-even occupancy</div>
+          <div class="metric-val gold" id="m-be">—</div>
+        </div>
+      </div>
+      <div class="card">
+        <table class="pl-table">
+          <thead>
+            <tr>
+              <th style="width:42%">Line item</th>
+              <th style="width:22%">Monthly (₹)</th>
+              <th style="width:18%">% of revenue</th>
+              <th style="width:18%;text-align:right">Proportion</th>
+            </tr>
+          </thead>
+          <tbody id="pl-body"></tbody>
+        </table>
+      </div>
+      <div class="info-box info-green" style="margin-top:20px">
+        <strong style="color:var(--cream)">Operating discipline:</strong> Rent must stay below 25% of revenue —
+        negotiate hard on this before signing anything. Complimentary drink cost (₹30/person/day, 2-drink cap) is
+        treated as a hospitality/marketing line, not F&B. Add staff only when occupancy consistently exceeds 70%.
+        Monthly access members provide the baseline revenue floor that protects against slow days.
+      </div>
+    </div>
+  </section>
+
+  <!-- 07 TRACK A -->
+  <section id="tracka">
+    <div class="container">
+      <div class="section-eyebrow">07 — Track A — Flagship OFFEE</div>
+      <h2 class="section-title">Full environmental control. Full brand identity.</h2>
+      <p class="section-lead">Track A is OFFEE's primary, long-term vision. A fully dedicated space — leased, fitted out to brand standards, and operated entirely as OFFEE. Every element of the environment — lighting, seating density, sound profile, spatial flow — is curated by OFFEE and no one else. Track B exists to discover demand and reduce expansion risk. Track A is where that demand lands permanently, inside a space that carries the full weight of the brand.</p>
+
+      <div class="grid-2" style="margin-bottom:32px">
+        <div class="card card-track">
+          <div class="section-eyebrow" style="margin-bottom:16px">How Track A works</div>
+          <div style="display:flex;flex-direction:column;gap:12px">
+            <div class="concept-item"><span class="ck">✓</span><span style="font-size:13px;color:var(--gray)">Franchisee
+                secures a space — target: top floor, non-prime location, negotiated rent</span></div>
+            <div class="concept-item"><span class="ck">✓</span><span style="font-size:13px;color:var(--gray)">One-time
+                OFFEE franchise fee + mandatory 2-week onboarding</span></div>
+            <div class="concept-item"><span class="ck">✓</span><span style="font-size:13px;color:var(--gray)">Full
+                interior fit-out to OFFEE brand and zone standards</span></div>
+            <div class="concept-item"><span class="ck">✓</span><span style="font-size:13px;color:var(--gray)">Operates
+                under OFFEE name, booking system, and quality framework</span></div>
+            <div class="concept-item"><span class="ck">✓</span><span style="font-size:13px;color:var(--gray)">Monthly
+                royalty of 6–8% of gross revenue paid to OFFEE HQ</span></div>
+            <div class="concept-item"><span class="ck">✓</span><span style="font-size:13px;color:var(--gray)">Monthly
+                subscriber pool revenue distributed by actual days visited</span></div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="section-eyebrow" style="margin-bottom:16px">Franchise fee structure</div>
+          <table style="width:100%;font-size:13px;border-collapse:collapse">
+            <tr style="border-bottom:1px solid var(--border)">
+              <td style="padding:10px 0;color:var(--gray)">One-time franchise fee</td>
+              <td style="text-align:right;color:var(--cream);font-weight:600">₹5–10 lakhs</td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--border)">
+              <td style="padding:10px 0;color:var(--gray)">Monthly royalty on gross</td>
+              <td style="text-align:right;color:var(--cream);font-weight:600">6–8%</td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--border)">
+              <td style="padding:10px 0;color:var(--gray)">Booking platform access</td>
+              <td style="text-align:right;color:var(--cream);font-weight:600">Included in royalty</td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--border)">
+              <td style="padding:10px 0;color:var(--gray)">Mandatory training</td>
+              <td style="text-align:right;color:var(--cream);font-weight:600">2 weeks onsite</td>
+            </tr>
+            <tr>
+              <td style="padding:10px 0;color:var(--gray)">International expansion</td>
+              <td style="text-align:right;color:var(--cream);font-weight:600">Master franchise model</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+
+      <div class="section-eyebrow" style="margin-bottom:20px">Monthly subscriber revenue flow — Track A</div>
+      <div class="flow-row">
+        <div class="flow-box">
+          <div class="flow-amount">₹6,000</div>
+          <div class="flow-label">User pays OFFEE HQ / month</div>
+        </div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-box hq">
+          <div class="flow-amount" style="color:var(--cream)">₹900</div>
+          <div class="flow-label">HQ keeps 15% platform fee</div>
+        </div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-box">
+          <div class="flow-amount">₹5,100</div>
+          <div class="flow-label">Pool → distributed by days visited</div>
+        </div>
+      </div>
+      <div class="checkin-example" style="margin-top:20px">
+        <div class="loc-card">
+          <div class="loc-name">Location A</div>
+          <div class="loc-days">14 days visited</div>
+          <div class="loc-earn">₹2,754</div>
+          <div class="loc-pct">54% of pool</div>
+        </div>
+        <div class="loc-card">
+          <div class="loc-name">Location B</div>
+          <div class="loc-days">10 days visited</div>
+          <div class="loc-earn">₹1,962</div>
+          <div class="loc-pct">38% of pool</div>
+        </div>
+        <div class="loc-card">
+          <div class="loc-name">Location C</div>
+          <div class="loc-days">2 days visited</div>
+          <div class="loc-earn">₹392</div>
+          <div class="loc-pct">8% of pool</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 08 TRACK B -->
+  <section id="trackb">
+    <div class="container">
+      <div class="section-eyebrow">08 — Track B — Distributed Network</div>
+      <h2 class="section-title">OFFEE Zone — café partnership infrastructure</h2>
+      <p class="section-lead">Track B is not a cheaper OFFEE. It is OFFEE's distributed workspace network — a demand validation layer that lets the brand establish local presence, study user behaviour, and build city-wide reach before committing the capital required for a Track A flagship. A defined section of a partner café — the OFFEE Zone — is set up for intentional, verified workspace access. The café retains full authority over its space. OFFEE users are guests with intentional access — not tenants.</p>
+
+      <div
+        style="padding:24px 28px;background:var(--surface);border:1px solid rgba(201,169,110,0.25);border-radius:4px;margin-bottom:32px">
+        <div style="font-size:10px;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);margin-bottom:16px">
+          Why Track B exists</div>
+        <div class="grid-3" style="gap:20px">
+          <div>
+            <div style="font-weight:600;font-size:13px;color:var(--cream);margin-bottom:6px">Demand discovery</div>
+            <div style="font-size:13px;color:var(--gray)">Before launching a full Track A flagship in a new city, Track B studies whether OFFEE users show up consistently, what times they prefer, and what work environments they seek — real intelligence before real capital.</div>
+          </div>
+          <div>
+            <div style="font-weight:600;font-size:13px;color:var(--cream);margin-bottom:6px">City expansion intelligence</div>
+            <div style="font-size:13px;color:var(--gray)">Track B establishes local presence across a city or region — turning café partners into distributed workspace access points while feeding OFFEE HQ with behavioural data about when and where demand is strongest.</div>
+          </div>
+          <div>
+            <div style="font-weight:600;font-size:13px;color:var(--cream);margin-bottom:6px">Capital efficiency</div>
+            <div style="font-size:13px;color:var(--gray)">Where Track A requires ₹10–15L in setup, a Track B partnership
+              can be live for ₹2–3L. It validates the geography before the investment.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card card-track" style="margin-bottom:32px">
+        <div class="section-eyebrow" style="margin-bottom:20px">How the money flows</div>
+        <div class="trackb-flow">
+          <div class="trackb-box offee">
+            <div
+              style="font-size:10px;letter-spacing:0.15em;text-transform:uppercase;color:var(--gray);margin-bottom:8px">
+              OFFEE user pays</div>
+            <div class="trackb-amount">₹500</div>
+            <div class="trackb-label">collected by OFFEE</div>
+          </div>
+          <div class="trackb-arrow">→</div>
+          <div class="trackb-box offee">
+            <div
+              style="font-size:10px;letter-spacing:0.15em;text-transform:uppercase;color:var(--gray);margin-bottom:8px">
+              OFFEE HQ keeps</div>
+            <div class="trackb-amount">₹75</div>
+            <div class="trackb-label">15% platform fee</div>
+          </div>
+          <div class="trackb-arrow">→</div>
+          <div class="trackb-box cafe">
+            <div
+              style="font-size:10px;letter-spacing:0.15em;text-transform:uppercase;color:var(--gray);margin-bottom:8px">
+              Café partner receives</div>
+            <div class="trackb-amount" style="color:#7dcea0">₹425</div>
+            <div class="trackb-label">85% per check-in</div>
+          </div>
+        </div>
+        <div class="info-box info-gold" style="margin-top:0">
+          <strong style="color:var(--cream)">Why per check-in, not monthly:</strong> A fixed monthly fee removes the
+          café's incentive to maintain quality. Per check-in aligns both parties — the café earns more only when OFFEE
+          users genuinely show up. OFFEE HQ earns only when the café delivers. The revenue model enforces mutual
+          accountability without a contract clause.
+        </div>
+      </div>
+
+      <!-- WORK SUITABILITY INDICATORS -->
+      <div class="card" style="margin-bottom:32px">
+        <div class="section-eyebrow" style="margin-bottom:6px">Work suitability indicators</div>
+        <p style="font-size:13px;color:var(--gray);margin-bottom:24px">Every OFFEE Zone location on the booking platform
+          will display verified suitability tags — set by OFFEE, not self-reported by the café. This manages
+          expectations honestly and helps users choose the right location for their session type.</p>
+        <div class="grid-3" style="gap:16px">
+          <div style="background:var(--surface2);border-radius:4px;padding:18px 16px">
+            <div
+              style="font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:12px">
+              Atmosphere</div>
+            <div style="display:flex;flex-direction:column;gap:8px">
+              <div style="font-size:12px;color:var(--gray);display:flex;gap:8px;align-items:center"><span
+                  style="color:#7dcea0;font-size:14px">◉</span> Quiet / focused</div>
+              <div style="font-size:12px;color:var(--gray);display:flex;gap:8px;align-items:center"><span
+                  style="color:var(--gold);font-size:14px">◉</span> Social / ambient</div>
+              <div style="font-size:12px;color:var(--gray);display:flex;gap:8px;align-items:center"><span
+                  style="color:#7dcea0;font-size:14px">◉</span> Calls allowed</div>
+              <div style="font-size:12px;color:var(--gray);display:flex;gap:8px;align-items:center"><span
+                  style="color:#e74c3c;font-size:14px">◉</span> Calls limited</div>
+            </div>
+          </div>
+          <div style="background:var(--surface2);border-radius:4px;padding:18px 16px">
+            <div
+              style="font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:12px">
+              Infrastructure</div>
+            <div style="display:flex;flex-direction:column;gap:8px">
+              <div style="font-size:12px;color:var(--gray);display:flex;gap:8px;align-items:center"><span
+                  style="color:#7dcea0;font-size:14px">◉</span> Power at every seat</div>
+              <div style="font-size:12px;color:var(--gray);display:flex;gap:8px;align-items:center"><span
+                  style="color:#7dcea0;font-size:14px">◉</span> Reliable Wi-Fi</div>
+              <div style="font-size:12px;color:var(--gray);display:flex;gap:8px;align-items:center"><span
+                  style="color:var(--gold);font-size:14px">◉</span> Limited plug points</div>
+            </div>
+          </div>
+          <div style="background:var(--surface2);border-radius:4px;padding:18px 16px">
+            <div
+              style="font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:12px">
+              Best suited for</div>
+            <div style="display:flex;flex-direction:column;gap:8px">
+              <div style="font-size:12px;color:var(--gray);display:flex;gap:8px;align-items:center"><span
+                  style="color:#7dcea0;font-size:14px">◉</span> 2–3 hour sessions</div>
+              <div style="font-size:12px;color:var(--gray);display:flex;gap:8px;align-items:center"><span
+                  style="color:#7dcea0;font-size:14px">◉</span> Half-day sessions</div>
+              <div style="font-size:12px;color:var(--gray);display:flex;gap:8px;align-items:center"><span
+                  style="color:var(--gold);font-size:14px">◉</span> Full-day sessions</div>
+              <div style="font-size:12px;color:var(--gray);display:flex;gap:8px;align-items:center"><span
+                  style="color:#e74c3c;font-size:14px">◉</span> Not full-day</div>
+            </div>
+          </div>
+        </div>
+        <div
+          style="font-size:12px;color:var(--gray);margin-top:16px;padding:12px 16px;background:var(--surface);border-radius:3px;border:1px solid var(--border)">
+          These indicators are OFFEE-verified during onboarding and reviewed quarterly. A Track B location that cannot
+          meet minimum infrastructure standards (reliable connectivity, power access) is not listed. Work suitability is
+          not a branding exercise — it is an honest signal to the user.</div>
+      </div>
+
+      <div class="grid-2" style="margin-bottom:32px">
+        <div class="card">
+          <div class="section-eyebrow" style="margin-bottom:16px">What the café pays OFFEE</div>
+          <table style="width:100%;font-size:13px;border-collapse:collapse">
+            <tr style="border-bottom:1px solid var(--border)">
+              <td style="padding:10px 0;color:var(--gray)">One-time setup fee</td>
+              <td style="text-align:right;color:var(--cream);font-weight:600">₹1–2 lakhs</td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--border)">
+              <td style="padding:10px 0;color:var(--gray)">OFFEE Zone brand fee</td>
+              <td style="text-align:right;color:var(--cream);font-weight:600">₹50,000–₹1 lakh</td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--border)">
+              <td style="padding:10px 0;color:var(--gray)">Ongoing platform fee</td>
+              <td style="text-align:right;color:var(--cream);font-weight:600">15% per check-in</td>
+            </tr>
+            <tr>
+              <td style="padding:10px 0;color:var(--gray)">Setup covers</td>
+              <td style="text-align:right;color:var(--cream);font-weight:600">Signage, seating, Wi-Fi upgrade</td>
+            </tr>
+          </table>
+        </div>
+        <div class="card">
+          <div class="section-eyebrow" style="margin-bottom:16px">What the café gets from OFFEE</div>
+          <div style="display:flex;flex-direction:column;gap:10px">
+            <div class="concept-item"><span class="ck">✓</span><span style="font-size:13px;color:var(--gray)">₹425 per
+                OFFEE check-in — earned only when users actually arrive</span></div>
+            <div class="concept-item"><span class="ck">✓</span><span style="font-size:13px;color:var(--gray)">OFFEE
+                platform drives new customers who would not have visited otherwise</span></div>
+            <div class="concept-item"><span class="ck">✓</span><span style="font-size:13px;color:var(--gray)">Full
+                flexibility during rush hours — café can open the OFFEE Zone to all guests</span></div>
+            <div class="concept-item"><span class="ck">✓</span><span style="font-size:13px;color:var(--gray)">OFFEE Zone
+                branding positions the café as a thoughtful, work-friendly space</span></div>
+            <div class="concept-item"><span class="ck">✓</span><span style="font-size:13px;color:var(--gray)">Check-in
+                and access management handled entirely by OFFEE</span></div>
+            <div class="concept-item"><span class="ck">✓</span><span style="font-size:13px;color:var(--gray)">Monthly
+                subscriber pool revenue flows by actual days visited — no dead revenue</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card" style="margin-bottom:24px">
+        <div class="section-eyebrow" style="margin-bottom:20px">Addressing café owner concerns</div>
+        <div>
+          <div class="concern-item">
+            <span style="font-size:20px;color:var(--gold);flex-shrink:0">?</span>
+            <div>
+              <div class="concern-q">"Won't OFFEE users sit all day on one order?"</div>
+              <div class="concern-a">Many cafés already host long-stay laptop users. OFFEE organises this existing behaviour into a predictable, hospitality-friendly revenue stream. OFFEE users have paid for workspace access — that payment goes to the café. The transaction removes the awkward ambiguity of "should I order more?" and replaces it with a clean, structured arrangement that benefits everyone. Monthly members have no complimentary drink and will order from the café menu directly.</div>
+            </div>
+          </div>
+          <div class="concern-item">
+            <span style="font-size:20px;color:var(--gold);flex-shrink:0">?</span>
+            <div>
+              <div class="concern-q">"During rush hour I lose my best seats"</div>
+              <div class="concern-a">The OFFEE Zone is returned to general café use whenever the café needs it. This is
+                built into the partnership agreement — no new OFFEE check-ins during peak windows flagged by the café.
+                You keep full authority over your space at your most valuable moments. The zone exists in your off-peak
+                and shoulder hours, where it was earning nothing before.</div>
+            </div>
+          </div>
+          <div class="concern-item">
+            <span style="font-size:20px;color:var(--gold);flex-shrink:0">?</span>
+            <div>
+              <div class="concern-q">"OFFEE branding will make my café look like a co-working office"</div>
+              <div class="concern-a">The OFFEE Zone is a subtle, demarcated section — not a branded take-over. Warm
+                materials, modest signage, and your café's existing ambience remain intact. OFFEE's visual language is
+                designed to complement hospitality spaces, not overpower them. The positioning actually elevates the
+                café: it signals that this is a place thoughtful about how people spend time.</div>
+            </div>
+          </div>
+          <div class="concern-item">
+            <span style="font-size:20px;color:var(--gold);flex-shrink:0">?</span>
+            <div>
+              <div class="concern-q">"What if I want to exit after a few months?"</div>
+              <div class="concern-a">60-day notice from either party, no lock-in. The seating and furniture can be
+                reused in the café. The Wi-Fi upgrade stays. The brand decals come down. The exit is clean. Track B is
+                designed to be a low-risk experiment for the café, with meaningful upside if it works — and very little
+                downside if it does not.</div>
+            </div>
+          </div>
+          <div class="concern-item" style="border-bottom:none">
+            <span style="font-size:20px;color:var(--gold);flex-shrink:0">?</span>
+            <div>
+              <div class="concern-q">"How do I know OFFEE will consistently bring me users?"</div>
+              <div class="concern-a">OFFEE helps cafés intentionally structure and monetise modern work behaviour. We earn only when you earn. The 15% platform fee is our incentive to keep your zone active. Monthly subscriber pool distributions are driven by actual days used at your location — which means every marketing effort OFFEE makes to grow the subscriber base directly benefits you. We are not your landlord. We are your distribution and demand-generation partner.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card card-green">
+        <div class="section-eyebrow" style="margin-bottom:16px">Track B earnings illustration — 8-seat OFFEE Zone</div>
+        <div class="grid-3">
+          <div style="text-align:center">
+            <div
+              style="font-size:10px;letter-spacing:0.15em;text-transform:uppercase;color:var(--gray);margin-bottom:8px">
+              6 check-ins / day average</div>
+            <div style="font-family:var(--font-display);font-size:28px;font-weight:700;color:#7dcea0">₹66,300</div>
+            <div style="font-size:12px;color:var(--gray);margin-top:4px">café earns / month</div>
+          </div>
+          <div style="text-align:center">
+            <div
+              style="font-size:10px;letter-spacing:0.15em;text-transform:uppercase;color:var(--gray);margin-bottom:8px">
+              4 check-ins / day average</div>
+            <div style="font-family:var(--font-display);font-size:28px;font-weight:700;color:var(--gold)">₹44,200</div>
+            <div style="font-size:12px;color:var(--gray);margin-top:4px">café earns / month</div>
+          </div>
+          <div style="text-align:center">
+            <div
+              style="font-size:10px;letter-spacing:0.15em;text-transform:uppercase;color:var(--gray);margin-bottom:8px">
+              2 check-ins / day average</div>
+            <div style="font-family:var(--font-display);font-size:28px;font-weight:700;color:var(--cream)">₹22,100</div>
+            <div style="font-size:12px;color:var(--gray);margin-top:4px">café earns / month</div>
+          </div>
+        </div>
+        <div style="font-size:12px;color:var(--gray);margin-top:20px;text-align:center">These are illustrative estimates
+          based on ₹425/check-in over 26 working days. Actual figures will vary by location, footfall, and session
+          length. Additional F&amp;B spend by OFFEE users is revenue entirely retained by the café.</div>
+      </div>
+
+      <!-- TRACK B INTERACTIVE P&L -->
+      <div style="margin-top:40px">
+        <div class="section-eyebrow" style="margin-bottom:8px">OFFEE Corner P&amp;L — Interactive Café Model</div>
+        <p style="font-size:13px;color:var(--gray);margin-bottom:28px">Adjust the sliders to model your OFFEE Corner. OFFEE keeps 15% (₹75) of every ₹500 check-in. The remaining 85% (₹425) flows to the café. The complimentary drink is the café’s cost — in exchange for it, OFFEE users feel welcomed and tend to order more on top.</p>
+
+        <!-- Revenue split explainer -->
+        <div class="trackb-flow" style="margin-bottom:32px">
+          <div class="trackb-box offee">
+            <div style="font-size:10px;letter-spacing:0.15em;text-transform:uppercase;color:var(--gray);margin-bottom:8px">User pays per check-in</div>
+            <div class="trackb-amount">₹500</div>
+            <div class="trackb-label">full-day pass</div>
+          </div>
+          <div class="trackb-arrow">→</div>
+          <div class="trackb-box offee">
+            <div style="font-size:10px;letter-spacing:0.15em;text-transform:uppercase;color:var(--gray);margin-bottom:8px">OFFEE keeps</div>
+            <div class="trackb-amount">₹75</div>
+            <div class="trackb-label">15% platform fee</div>
+          </div>
+          <div class="trackb-arrow">→</div>
+          <div class="trackb-box cafe">
+            <div style="font-size:10px;letter-spacing:0.15em;text-transform:uppercase;color:var(--gray);margin-bottom:8px">Café receives</div>
+            <div class="trackb-amount" style="color:#7dcea0">₹425</div>
+            <div class="trackb-label">85% per check-in</div>
+          </div>
+        </div>
+
+        <!-- Controls -->
+        <div class="card" style="margin-bottom:24px">
+          <div class="econ-controls">
+            <div class="ctrl-group">
+              <label>OFFEE Zone seats</label>
+              <input type="range" min="4" max="50" value="8" step="1" id="cb-seats" oninput="recalcCorner()">
+              <div class="ctrl-val" id="cv-seats">8</div>
+            </div>
+            <div class="ctrl-group">
+              <label>Avg daily check-ins</label>
+              <input type="range" min="1" max="20" value="6" step="1" id="cb-checkins" oninput="recalcCorner()">
+              <div class="ctrl-val" id="cv-checkins">6</div>
+            </div>
+            <div class="ctrl-group">
+              <label>Operating days / month</label>
+              <input type="range" min="1" max="31" value="26" step="1" id="cb-days" oninput="recalcCorner()">
+              <div class="ctrl-val" id="cv-days">26</div>
+            </div>
+          </div>
+          <div class="econ-controls" style="margin-bottom:0">
+            <div class="ctrl-group">
+              <label>Complimentary drink cost (café bears)</label>
+              <input type="range" min="20" max="80" value="35" step="5" id="cb-drink" oninput="recalcCorner()">
+              <div class="ctrl-val" id="cv-drink">₹35</div>
+            </div>
+            <div class="ctrl-group">
+              <label>Avg extra F&amp;B spend per user</label>
+              <input type="range" min="0" max="4000" value="70" step="50" id="cb-fb" oninput="recalcCorner()">
+              <div class="ctrl-val" id="cv-fb">₹70</div>
+            </div>
+            <div class="ctrl-group">
+              <label>Zone overhead / month (power, cleaning)</label>
+              <input type="range" min="1000" max="8000" value="3000" step="500" id="cb-overhead" oninput="recalcCorner()">
+              <div class="ctrl-val" id="cv-overhead">₹3,000</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Metrics -->
+        <div class="metric-grid" style="margin-bottom:24px">
+          <div class="metric-card">
+            <div class="metric-label">Café gross revenue</div>
+            <div class="metric-val pos" id="cb-m-rev">—</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-label">OFFEE commission earned</div>
+            <div class="metric-val gold" id="cb-m-offee">—</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-label">Café total costs</div>
+            <div class="metric-val neg" id="cb-m-cost">—</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-label">Café net profit</div>
+            <div class="metric-val" id="cb-m-profit">—</div>
+          </div>
+        </div>
+
+        <!-- P&L Table -->
+        <div class="card">
+          <table class="pl-table">
+            <thead>
+              <tr>
+                <th style="width:44%">Line item</th>
+                <th style="width:22%">Monthly (₹)</th>
+                <th style="width:16%">Per check-in</th>
+                <th style="width:18%;text-align:right">Proportion</th>
+              </tr>
+            </thead>
+            <tbody id="cb-pl-body"></tbody>
+          </table>
+        </div>
+
+        <div class="info-box info-gold" style="margin-top:20px">
+          <strong style="color:var(--cream)">The complimentary drink is a hospitality investment, not a loss.</strong> A user who receives a warm welcome on arrival is far more likely to order additional F&amp;B, return the next week, and become a monthly subscriber. At ₹35/drink, the net margin on OFFEE Zone access still remains strong for the café — and the psychological effect on the user is disproportionate to the cost.
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- 08B INVISIBLE INFRASTRUCTURE -->
+  <section id="invisible-infra">
+    <div class="container">
+      <div class="section-eyebrow">08b — Invisible Infrastructure</div>
+      <h2 class="section-title">The system should never feel like a system.</h2>
+      <p class="section-lead">OFFEE is a hospitality brand first. The underlying operational layer — occupancy management, zone popularity, repeat visit tracking, peak-hour balancing — is never visible to the user. What the user experiences is warmth, ease, and intentionality. The software is the backstage.</p>
+      <div class="grid-3">
+        <div class="card">
+          <div style="font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:12px">What the user experiences</div>
+          <div style="display:flex;flex-direction:column;gap:10px">
+            <div class="concept-item"><span class="ck">✓</span><span style="font-size:13px;color:var(--gray)">A warm, familiar environment to begin their day</span></div>
+            <div class="concept-item"><span class="ck">✓</span><span style="font-size:13px;color:var(--gray)">A simple check-in, a drink, a comfortable seat</span></div>
+            <div class="concept-item"><span class="ck">✓</span><span style="font-size:13px;color:var(--gray)">Zero friction — no paperwork, no judgment, no complexity</span></div>
+          </div>
+        </div>
+        <div class="card">
+          <div style="font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:12px">What the system quietly manages</div>
+          <div style="display:flex;flex-direction:column;gap:10px">
+            <div class="concept-item"><span class="ck">✓</span><span style="font-size:13px;color:var(--gray)">Workspace access and occupancy windows</span></div>
+            <div class="concept-item"><span class="ck">✓</span><span style="font-size:13px;color:var(--gray)">Zone popularity and peak-hour balancing</span></div>
+            <div class="concept-item"><span class="ck">✓</span><span style="font-size:13px;color:var(--gray)">Repeat visit patterns and user behaviour signals</span></div>
+          </div>
+        </div>
+        <div class="card">
+          <div style="font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:12px">The design principle</div>
+          <div style="font-size:13px;color:var(--gray);line-height:1.8">The system earns loyalty by staying out of the user's way. Every check-in should feel like arriving at a favourite place — not processing a transaction. Operations run underneath. Hospitality runs on top.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 09 SETUP COST -->
+  <section id="setup">
+    <div class="container">
+      <div class="section-eyebrow">09 — Setup Cost Calculator</div>
+      <h2 class="section-title">What it costs to open</h2>
+      <p class="section-lead">Edit any number below to model your actual setup costs. Both Track A and Track B
+        breakdowns are shown — the figures are starting estimates, not fixed.</p>
+
+      <div class="tab-bar">
+        <button class="tab-btn active" onclick="switchTab('setup','seta',this)">Track A — Standalone</button>
+        <button class="tab-btn" onclick="switchTab('setup','setb',this)">Track B — OFFEE Zone</button>
+      </div>
+
+      <!-- TRACK A SETUP -->
+      <div id="setup-seta" class="tab-panel active">
+        <div class="grid-2" style="gap:32px">
+          <div class="card">
+            <div class="section-eyebrow" style="margin-bottom:20px">One-time setup costs</div>
+            <div id="setup-a-items">
+              <div class="setup-item">
+                <div>
+                  <div class="setup-item-name">Interior fit-out</div>
+                  <div class="setup-item-note">Furniture, partitions, flooring, lighting</div>
+                </div><input class="setup-input" type="number" value="350000" oninput="calcSetup('a')"
+                  data-cat="setup-a">
+                <div style="font-size:12px;color:var(--gray);width:40px;text-align:right">₹</div>
+              </div>
+              <div class="setup-item">
+                <div>
+                  <div class="setup-item-name">Electrical & power points</div>
+                  <div class="setup-item-note">Power at every seat, surge protection</div>
+                </div><input class="setup-input" type="number" value="80000" oninput="calcSetup('a')"
+                  data-cat="setup-a">
+                <div style="font-size:12px;color:var(--gray);width:40px;text-align:right">₹</div>
+              </div>
+              <div class="setup-item">
+                <div>
+                  <div class="setup-item-name">Internet infrastructure</div>
+                  <div class="setup-item-note">Fibre setup, mesh Wi-Fi hardware</div>
+                </div><input class="setup-input" type="number" value="50000" oninput="calcSetup('a')"
+                  data-cat="setup-a">
+                <div style="font-size:12px;color:var(--gray);width:40px;text-align:right">₹</div>
+              </div>
+              <div class="setup-item">
+                <div>
+                  <div class="setup-item-name">Coffee & tea counter</div>
+                  <div class="setup-item-note">Equipment, machine, setup</div>
+                </div><input class="setup-input" type="number" value="75000" oninput="calcSetup('a')"
+                  data-cat="setup-a">
+                <div style="font-size:12px;color:var(--gray);width:40px;text-align:right">₹</div>
+              </div>
+              <div class="setup-item">
+                <div>
+                  <div class="setup-item-name">Signage & branding</div>
+                  <div class="setup-item-note">Facade, interior, menus, stationery</div>
+                </div><input class="setup-input" type="number" value="60000" oninput="calcSetup('a')"
+                  data-cat="setup-a">
+                <div style="font-size:12px;color:var(--gray);width:40px;text-align:right">₹</div>
+              </div>
+              <div class="setup-item">
+                <div>
+                  <div class="setup-item-name">Call pod construction</div>
+                  <div class="setup-item-note">2 soundproofed pods</div>
+                </div><input class="setup-input" type="number" value="90000" oninput="calcSetup('a')"
+                  data-cat="setup-a">
+                <div style="font-size:12px;color:var(--gray);width:40px;text-align:right">₹</div>
+              </div>
+              <div class="setup-item">
+                <div>
+                  <div class="setup-item-name">Security deposit (rent)</div>
+                  <div class="setup-item-note">Typically 3–6 months rent upfront</div>
+                </div><input class="setup-input" type="number" value="120000" oninput="calcSetup('a')"
+                  data-cat="setup-a">
+                <div style="font-size:12px;color:var(--gray);width:40px;text-align:right">₹</div>
+              </div>
+              <div class="setup-item">
+                <div>
+                  <div class="setup-item-name">Franchise fee (if franchisee)</div>
+                  <div class="setup-item-note">Paid to OFFEE HQ</div>
+                </div><input class="setup-input" type="number" value="500000" oninput="calcSetup('a')"
+                  data-cat="setup-a">
+                <div style="font-size:12px;color:var(--gray);width:40px;text-align:right">₹</div>
+              </div>
+              <div class="setup-item">
+                <div>
+                  <div class="setup-item-name">Contingency (10%)</div>
+                  <div class="setup-item-note">Always keep a buffer</div>
+                </div><input class="setup-input" type="number" value="82500" id="contingency-a" oninput="calcSetup('a')"
+                  data-cat="setup-a">
+                <div style="font-size:12px;color:var(--gray);width:40px;text-align:right">₹</div>
+              </div>
+            </div>
+            <div class="setup-total-row"><span class="setup-total-label">Total setup investment</span><span
+                class="setup-total-val" id="total-a">—</span></div>
+          </div>
+          <div>
+            <div class="card" style="margin-bottom:20px">
+              <div class="section-eyebrow" style="margin-bottom:16px">Working capital needed</div>
+              <div style="display:flex;flex-direction:column;gap:12px">
+                <div class="setup-item" style="padding:10px 0">
+                  <div>
+                    <div class="setup-item-name">Month 1–3 operating float</div>
+                    <div class="setup-item-note">Cover costs before breakeven</div>
+                  </div><input class="setup-input" type="number" value="150000" oninput="calcSetup('a')"
+                    data-cat="setup-a">
+                  <div style="font-size:12px;color:var(--gray);width:40px;text-align:right">₹</div>
+                </div>
+                <div class="setup-item" style="padding:10px 0;border-bottom:none">
+                  <div>
+                    <div class="setup-item-name">Pre-launch marketing</div>
+                    <div class="setup-item-note">Instagram, launch event, waitlist</div>
+                  </div><input class="setup-input" type="number" value="25000" oninput="calcSetup('a')"
+                    data-cat="setup-a">
+                  <div style="font-size:12px;color:var(--gray);width:40px;text-align:right">₹</div>
+                </div>
+              </div>
+            </div>
+            <div class="card card-gold">
+              <div class="section-eyebrow" style="margin-bottom:16px">Summary</div>
+              <table style="width:100%;font-size:14px;border-collapse:collapse">
+                <tr style="border-bottom:1px solid var(--border)">
+                  <td style="padding:10px 0;color:var(--gray)">Fit-out + infrastructure</td>
+                  <td style="text-align:right;color:var(--cream)" id="sa-fitout">—</td>
+                </tr>
+                <tr style="border-bottom:1px solid var(--border)">
+                  <td style="padding:10px 0;color:var(--gray)">Franchise fee</td>
+                  <td style="text-align:right;color:var(--cream)" id="sa-franchise">—</td>
+                </tr>
+                <tr style="border-bottom:1px solid var(--border)">
+                  <td style="padding:10px 0;color:var(--gray)">Working capital</td>
+                  <td style="text-align:right;color:var(--cream)" id="sa-working">—</td>
+                </tr>
+                <tr>
+                  <td style="padding:12px 0;color:var(--cream);font-weight:600;font-size:16px">Total to open</td>
+                  <td
+                    style="text-align:right;font-family:var(--font-display);font-size:22px;font-weight:700;color:var(--gold)"
+                    id="sa-total">—</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- TRACK B SETUP -->
+      <div id="setup-setb" class="tab-panel">
+        <div class="grid-2" style="gap:32px">
+          <div class="card">
+            <div class="section-eyebrow" style="margin-bottom:20px">Track B — OFFEE Zone setup costs (per café partner)
+            </div>
+            <div id="setup-b-items">
+              <div class="setup-item">
+                <div>
+                  <div class="setup-item-name">OFFEE Zone seating</div>
+                  <div class="setup-item-note">6–10 flexible work-appropriate chairs and tables</div>
+                </div><input class="setup-input" type="number" value="80000" oninput="calcSetup('b')"
+                  data-cat="setup-b">
+                <div style="font-size:12px;color:var(--gray);width:40px;text-align:right">₹</div>
+              </div>
+              <div class="setup-item">
+                <div>
+                  <div class="setup-item-name">Power points at each seat</div>
+                  <div class="setup-item-note">Electrical work for desk-level power</div>
+                </div><input class="setup-input" type="number" value="25000" oninput="calcSetup('b')"
+                  data-cat="setup-b">
+                <div style="font-size:12px;color:var(--gray);width:40px;text-align:right">₹</div>
+              </div>
+              <div class="setup-item">
+                <div>
+                  <div class="setup-item-name">Wi-Fi upgrade / mesh node</div>
+                  <div class="setup-item-note">Dedicated node for OFFEE Corner</div>
+                </div><input class="setup-input" type="number" value="15000" oninput="calcSetup('b')"
+                  data-cat="setup-b">
+                <div style="font-size:12px;color:var(--gray);width:40px;text-align:right">₹</div>
+              </div>
+              <div class="setup-item">
+                <div>
+                  <div class="setup-item-name">OFFEE Zone branding</div>
+                  <div class="setup-item-note">Subtle partition, zone signage, table markers</div>
+                </div><input class="setup-input" type="number" value="30000" oninput="calcSetup('b')"
+                  data-cat="setup-b">
+                <div style="font-size:12px;color:var(--gray);width:40px;text-align:right">₹</div>
+              </div>
+              <div class="setup-item">
+                <div>
+                  <div class="setup-item-name">Franchise fee to OFFEE HQ</div>
+                  <div class="setup-item-note">Brand rights + system access</div>
+                </div><input class="setup-input" type="number" value="75000" oninput="calcSetup('b')"
+                  data-cat="setup-b">
+                <div style="font-size:12px;color:var(--gray);width:40px;text-align:right">₹</div>
+              </div>
+              <div class="setup-item">
+                <div>
+                  <div class="setup-item-name">Check-in hardware</div>
+                  <div class="setup-item-note">Tablet/QR stand for entry management</div>
+                </div><input class="setup-input" type="number" value="8000" oninput="calcSetup('b')" data-cat="setup-b">
+                <div style="font-size:12px;color:var(--gray);width:40px;text-align:right">₹</div>
+              </div>
+              <div class="setup-item">
+                <div>
+                  <div class="setup-item-name">Contingency (10%)</div>
+                  <div class="setup-item-note">Always keep a buffer</div>
+                </div><input class="setup-input" type="number" value="23300" id="contingency-b" oninput="calcSetup('b')"
+                  data-cat="setup-b">
+                <div style="font-size:12px;color:var(--gray);width:40px;text-align:right">₹</div>
+              </div>
+            </div>
+            <div class="setup-total-row"><span class="setup-total-label">Total setup investment</span><span
+                class="setup-total-val" id="total-b">—</span></div>
+          </div>
+          <div>
+            <div class="card card-green" style="margin-bottom:20px">
+              <div class="section-eyebrow" style="margin-bottom:16px">Track B vs Track A — capital comparison</div>
+              <table style="width:100%;font-size:13px;border-collapse:collapse">
+                <tr style="border-bottom:1px solid var(--border)">
+                  <td style="padding:10px 0;color:var(--gray)">Track A total investment</td>
+                  <td style="text-align:right;color:var(--cream);font-weight:600" id="cmp-a">₹12–15 lakhs</td>
+                </tr>
+                <tr style="border-bottom:1px solid var(--border)">
+                  <td style="padding:10px 0;color:var(--gray)">Track B total investment</td>
+                  <td style="text-align:right;color:#7dcea0;font-weight:600" id="cmp-b">₹2–3 lakhs</td>
+                </tr>
+                <tr>
+                  <td style="padding:10px 0;color:var(--gray)">Capital saving</td>
+                  <td style="text-align:right;color:#7dcea0;font-weight:600" id="cmp-save">~80% less</td>
+                </tr>
+              </table>
+            </div>
+            <div class="card card-gold">
+              <div class="section-eyebrow" style="margin-bottom:12px">Track B payback estimate</div>
+              <div style="font-size:13px;color:var(--gray);line-height:1.8">At 6 seats filled per day, a Track B corner
+                earns <strong style="color:#7dcea0">₹66,300/month</strong> for the café. At ₹2.5L total investment, the
+                café owner breaks even in <strong style="color:var(--cream)">under 4 months</strong>. After that it is
+                pure margin — with no lease and no head-count added.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 10 REVENUE STREAMS -->
+  <section id="revenue">
+    <div class="container">
+      <div class="section-eyebrow">10 — Revenue Streams</div>
+      <h2 class="section-title">How OFFEE earns — five interlocking layers</h2>
+      <p class="section-lead">No single income stream carries the business. The model is deliberately layered so that a
+        slow occupancy day at one location does not break the operation. Each stream reinforces the others.</p>
+      <div class="grid-3" style="margin-bottom:20px">
+        <div class="card">
+          <div
+            style="font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:12px">
+            Primary</div>
+          <div style="font-weight:600;font-size:15px;color:var(--cream);margin-bottom:8px">Workspace access fees</div>
+          <div style="font-size:13px;color:var(--gray)">Track A: full-day ₹500, 10-day pack ₹4,650, monthly ₹6,000.
+            Track B: Focus Pass ₹199, Half-Day ₹299, Full-Day ₹449, Monthly Lite ₹1,299. People are paying for
+            atmosphere, intentional access, and focus — not for coffee. Target 60–65% of total revenue.</div>
+        </div>
+        <div class="card">
+          <div
+            style="font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:12px">
+            Secondary</div>
+          <div style="font-weight:600;font-size:15px;color:var(--cream);margin-bottom:8px">F&amp;B — food and additional
+            beverages</div>
+          <div style="font-size:13px;color:var(--gray)">Beyond the complimentary drink — additional coffee, food,
+            snacks. Monthly members buy directly from the F&B menu. Target 18–22% of total revenue without
+            over-engineering the kitchen.</div>
+        </div>
+        <div class="card">
+          <div
+            style="font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:12px">
+            Tertiary</div>
+          <div style="font-weight:600;font-size:15px;color:var(--cream);margin-bottom:8px">Off-peak space hire</div>
+          <div style="font-size:13px;color:var(--gray)">Evening workshops, weekend sessions, quiet corporate team days.
+            The space earns during hours that would otherwise sit empty. ₹15,000–₹40,000 per event depending on duration
+            and headcount.</div>
+        </div>
+      </div>
+      <div class="grid-2">
+        <div class="card">
+          <div
+            style="font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:12px">
+            Scale income</div>
+          <div style="font-weight:600;font-size:15px;color:var(--cream);margin-bottom:8px">Franchise fees and royalties
+          </div>
+          <div style="font-size:13px;color:var(--gray)">Track A: one-time ₹5–10L + 6–8% monthly royalty. Track B:
+            ₹75K–₹1.5L setup + 15% per check-in. At scale, this becomes OFFEE HQ's dominant income — earned for
+            maintaining the system, brand, and standards.</div>
+        </div>
+        <div class="card">
+          <div
+            style="font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:12px">
+            Passive</div>
+          <div style="font-weight:600;font-size:15px;color:var(--cream);margin-bottom:8px">Virtual address services
+          </div>
+          <div style="font-size:13px;color:var(--gray)">A registered business address, mail handling, and GST
+            eligibility for freelancers and small companies. ₹800–₹1,000/month per client, near-zero cost to deliver,
+            and highly sticky once activated.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 11 ROADMAP -->
+  <section id="roadmap">
+    <div class="container">
+      <div class="section-eyebrow">11 — 4-Year Roadmap</div>
+      <h2 class="section-title">Perinthalmanna to South India</h2>
+      <p class="section-lead">The roadmap is deliberately paced. Phase 0 is about listening. Phase 1 is about surviving.
+        Phase 2 is about replicating what works. Franchising, expansion, and international growth are future
+        opportunities — they follow proof, not ambition.</p>
+      <div class="roadmap">
+        <div class="rm-item">
+          <div class="rm-phase">Phase 0 · Now — Month 1 · Listen</div>
+          <div class="rm-title">Validation before investment</div>
+          <div class="rm-items">
+            <div class="rm-tag">Survey 50–100 potential users honestly</div>
+            <div class="rm-tag">Build offee.space waitlist</div>
+            <div class="rm-tag">Scout 3 Perinthalmanna locations</div>
+            <div class="rm-tag">Pre-sell 20–30 day-passes before opening</div>
+            <div class="rm-tag">Talk to 5 local companies about team access</div>
+            <div class="rm-tag">Identify 2–3 potential Track B café partners</div>
+          </div>
+        </div>
+        <div class="rm-item">
+          <div class="rm-phase">Phase 1 · Month 1–3 · Pilot</div>
+          <div class="rm-title">Perinthalmanna soft open — Track A</div>
+          <div class="rm-items">
+            <div class="rm-tag">Waitlist-first opening</div>
+            <div class="rm-tag">Booking via WhatsApp + Razorpay</div>
+            <div class="rm-tag">Instagram presence from day one</div>
+            <div class="rm-tag">Track occupancy and NPS weekly</div>
+            <div class="rm-tag">Lock 1–2 corporate accounts</div>
+            <div class="rm-tag">Begin Track B café conversations</div>
+          </div>
+        </div>
+        <div class="rm-item">
+          <div class="rm-phase">Phase 1 · Month 4–12 · Stabilise</div>
+          <div class="rm-title">Prove unit economics + launch first Track B</div>
+          <div class="rm-items">
+            <div class="rm-tag">Consistent 55–65% occupancy</div>
+            <div class="rm-tag">Monthly profit documented and repeatable</div>
+            <div class="rm-tag">First OFFEE Zone in a partner café</div>
+            <div class="rm-tag">SOP documented in full</div>
+            <div class="rm-tag">Simple booking system (no-code app or form)</div>
+            <div class="rm-tag">First off-peak event hosted</div>
+          </div>
+        </div>
+        <div class="rm-item">
+          <div class="rm-phase">Phase 2 · Year 2 · Replicate</div>
+          <div class="rm-title">Locations 2 & 3 (Track A) + 3–5 Track B zones</div>
+          <div class="rm-items">
+            <div class="rm-tag">Second Track A — company-owned, Kerala</div>
+            <div class="rm-tag">Third Track A — company-owned, different city</div>
+            <div class="rm-tag">3–5 Track B café zone partnerships</div>
+            <div class="rm-tag">QR check-in system live (simple, reliable)</div>
+            <div class="rm-tag">Credit pack + monthly pool operational</div>
+            <div class="rm-tag">Franchise operations manual drafted</div>
+          </div>
+        </div>
+        <div class="rm-item">
+          <div class="rm-phase">Phase 3 · Year 3 · Franchise</div>
+          <div class="rm-title">First external franchisees — both tracks</div>
+          <div class="rm-items">
+            <div class="rm-tag">First Track A franchise agreement signed</div>
+            <div class="rm-tag">Track B scaled to 10–15 café zones</div>
+            <div class="rm-tag">Franchisee onboarding programme live</div>
+            <div class="rm-tag">Virtual address service launched</div>
+            <div class="rm-tag">Franchise quality audit system in place</div>
+          </div>
+        </div>
+        <div class="rm-item">
+          <div class="rm-phase">Phase 4 · Year 4 · Long-term opportunity</div>
+          <div class="rm-title">South India network + international exploration</div>
+          <div class="rm-items">
+            <div class="rm-tag">8–12 Track A locations across South India</div>
+            <div class="rm-tag">20–30 Track B zones in key cities</div>
+            <div class="rm-tag">Dubai feasibility study initiated</div>
+            <div class="rm-tag">Master franchise model defined (if pursued)</div>
+            <div class="rm-tag">Central platform for all franchisees</div>
+            <div class="rm-tag">Decision point: grow organically or raise capital</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 12 RISKS -->
+  <section id="risks">
+    <div class="container">
+      <div class="section-eyebrow">12 — Risk Register</div>
+      <h2 class="section-title">Known risks & mitigations</h2>
+      <p class="section-lead">Every risk is specific to OFFEE, with a concrete mitigation and a warning signal to act
+        on.</p>
+      <div class="risk-item">
+        <div>
+          <div class="risk-title">Low occupancy in early months</div>
+          <div class="risk-mitigation">Pre-sell 30 day-passes before opening. Lock 2 corporate accounts before launch.
+            Early-adopter offer: first month at ₹350/day. Never open cold. <strong
+              style="color:var(--cream)">Signal:</strong> occupancy below 30% after month 2 — trigger a flash promotion
+            immediately.</div>
+        </div>
+        <div class="risk-badge risk-h">High</div>
+      </div>
+      <div class="risk-item">
+        <div>
+          <div class="risk-title">Rent exceeds 25% of revenue</div>
+          <div class="risk-mitigation">Negotiate top-floor / non-prime locations for leverage. Revenue-share rent
+            clause. Lock 2-year lease with increase cap. <strong style="color:var(--cream)">Signal:</strong> rent
+            crossing 25% of monthly revenue at any occupancy below 60%.</div>
+        </div>
+        <div class="risk-badge risk-h">High</div>
+      </div>
+      <div class="risk-item">
+        <div>
+          <div class="risk-title">Track B café quality drops</div>
+          <div class="risk-mitigation">Quarterly mystery visitor checks. Franchisee NPS tracking. If a café Corner falls
+            below 4-star average, issue a 30-day improvement notice then exit. One bad Corner damages the whole brand.
+            <strong style="color:var(--cream)">Signal:</strong> any Corner receiving consistent sub-4 reviews.</div>
+        </div>
+        <div class="risk-badge risk-h">High</div>
+      </div>
+      <div class="risk-item">
+        <div>
+          <div class="risk-title">Complimentary coffee eats margin</div>
+          <div class="risk-mitigation">Cap at 2 drinks/person/day. Partner with local roaster for bulk pricing (target
+            ₹25–30/cup). Track cost per head weekly. Monthly subscribers get no complimentary drink — this protects
+            margin on the highest-frequency users. <strong style="color:var(--cream)">Signal:</strong> drink cost
+            exceeding ₹40/person/day.</div>
+        </div>
+        <div class="risk-badge risk-m">Medium</div>
+      </div>
+      <div class="risk-item">
+        <div>
+          <div class="risk-title">Competitor copies the model</div>
+          <div class="risk-mitigation">Speed to market is your moat in Phase 1. Community + brand loyalty is your moat
+            in Phase 2. Track B café partnerships create geographic exclusivity — a competitor can't use the same café.
+            <strong style="color:var(--cream)">Signal:</strong> any café-office hybrid opening within 2km.</div>
+        </div>
+        <div class="risk-badge risk-m">Medium</div>
+      </div>
+      <div class="risk-item">
+        <div>
+          <div class="risk-title">Over-reliance on one corporate account</div>
+          <div class="risk-mitigation">No single corporate account exceeds 30% of location revenue. Offer prepaid packs
+            for cooling-off revenue on cancellation. <strong style="color:var(--cream)">Signal:</strong> any single
+            account crossing 25% of monthly revenue.</div>
+        </div>
+        <div class="risk-badge risk-m">Medium</div>
+      </div>
+      <div class="risk-item">
+        <div>
+          <div class="risk-title">Dubai regulatory complexity</div>
+          <div class="risk-mitigation">Use a master franchise partner with local UAE market knowledge. OFFEE provides
+            brand, system, training — partner handles compliance, staffing, local regulation. Minimum 3 profitable Track
+            A locations before any Dubai conversation. <strong style="color:var(--cream)">Signal:</strong> any licensing
+            delay exceeding 6 months.</div>
+        </div>
+        <div class="risk-badge risk-l">Lower</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 13 FINANCIALS -->
+  <section id="financials">
+    <div class="container">
+      <div class="section-eyebrow">13 — Financial Milestones</div>
+      <h2 class="section-title">Measured growth, not projected ambition</h2>
+      <p class="section-lead">These are directional milestones, not revenue guarantees. The pilot phase exists precisely
+        to replace these estimates with real data. The discipline is in not accelerating faster than the numbers
+        justify.</p>
+      <div style="overflow-x:auto">
+        <table class="pl-table" style="min-width:700px">
+          <thead>
+            <tr>
+              <th>Milestone</th>
+              <th>Timeline</th>
+              <th>Track A</th>
+              <th>Track B</th>
+              <th style="text-align:right">Indicative revenue</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="color:var(--cream)">Pilot open</td>
+              <td style="color:var(--gray)">Month 1</td>
+              <td style="color:var(--gray)">1 location</td>
+              <td style="color:var(--gray)">—</td>
+              <td style="text-align:right;color:var(--gray)">To be measured</td>
+            </tr>
+            <tr>
+              <td style="color:var(--cream)">Breakeven confirmed</td>
+              <td style="color:var(--gray)">Month 3–4</td>
+              <td style="color:var(--gray)">1 location</td>
+              <td style="color:var(--gray)">Negotiations</td>
+              <td style="text-align:right;color:var(--gray)">Pilot dependent</td>
+            </tr>
+            <tr>
+              <td style="color:var(--cream)">First Track B live</td>
+              <td style="color:var(--gray)">Month 6–9</td>
+              <td style="color:var(--gray)">1 location</td>
+              <td style="color:var(--gray)">1–2 zones</td>
+              <td style="text-align:right;color:var(--gray)">Combined from both</td>
+            </tr>
+            <tr>
+              <td style="color:var(--cream)">Second & third Track A</td>
+              <td style="color:var(--gray)">Year 2</td>
+              <td style="color:var(--gray)">3 locations</td>
+              <td style="color:var(--gray)">3–5 zones</td>
+              <td style="text-align:right;color:var(--gray)">Scales with occupancy</td>
+            </tr>
+            <tr>
+              <td style="color:var(--cream)">Franchise programme live</td>
+              <td style="color:var(--gray)">Year 3</td>
+              <td style="color:var(--gray)">3 owned + franchises</td>
+              <td style="color:var(--gray)">10–15 zones</td>
+              <td style="text-align:right;color:var(--gold)">Network-wide revenue</td>
+            </tr>
+            <tr class="row-total">
+              <td>South India network</td>
+              <td>Year 4</td>
+              <td>8–12 locations</td>
+              <td>20–30 zones</td>
+              <td style="text-align:right;color:var(--gold)">Decision point on scale</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div
+        style="margin-top:40px;padding:28px 32px;background:var(--surface);border:1px solid var(--border);border-radius:4px">
+        <div class="section-eyebrow" style="margin-bottom:16px">Future opportunities — when the time is right</div>
+        <div class="grid-3" style="gap:20px">
+          <div>
+            <div style="font-weight:600;font-size:13px;color:var(--cream);margin-bottom:8px">International expansion
+            </div>
+            <div style="font-size:13px;color:var(--gray)">Dubai represents a clear opportunity — high density of South
+              Indian diaspora, strong café culture, and workspace demand. Explored only after 3+ profitable Track A
+              locations in India, via a master franchise structure with a local partner.</div>
+          </div>
+          <div>
+            <div style="font-weight:600;font-size:13px;color:var(--cream);margin-bottom:8px">Technology layer</div>
+            <div style="font-size:13px;color:var(--gray)">A proprietary OFFEE app and QR check-in system are natural
+              evolutions as the network matures. These are Phase 2–3 investments — not pilot requirements. The pilot
+              runs on WhatsApp and Razorpay. The tech should follow proven demand, not predict it.</div>
+          </div>
+          <div>
+            <div style="font-weight:600;font-size:13px;color:var(--cream);margin-bottom:8px">Capital raising</div>
+            <div style="font-size:13px;color:var(--gray)">OFFEE is designed to be self-funding through Phase 1 and into
+              Phase 2. A seed or angel round becomes relevant only if accelerating the Track A rollout faster than
+              organic profits allow. This is a choice, not a necessity.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-logo"><img src="logo-word-light.png" alt="OFFEE" style="height:44px;width:auto;opacity:0.9"></div>
+    <div class="footer-tag">A warm workspace outside home · offee.space</div>
+    <div style="width:40px;height:1px;background:var(--gold);margin:0 auto 40px"></div>
+    <div class="footer-note">Business Plan · Confidential · 2026 · Perinthalmanna, Kerala, India</div>
+  </footer>
+
+  <script>
+    /* ── TAB SWITCHER ── */
+    function switchTab(group, id, btn) {
+      document.querySelectorAll('[id^="' + group + '-"]').forEach(p => p.classList.remove('active'));
+      document.getElementById(group + '-' + id).classList.add('active');
+      btn.closest('.tab-bar').querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+    }
+
+    /* ── UNIT ECONOMICS ── */
+    function fmt(n) { return '₹' + Math.round(Math.abs(n)).toLocaleString('en-IN'); }
+    function pct(n, t) { return t > 0 ? Math.round(n / t * 100) + '%' : '0%'; }
+
+    function recalc() {
+      const seats = +document.getElementById('e-seats').value;
+      const occ = +document.getElementById('e-occ').value / 100;
+      const rent = +document.getElementById('e-rent').value;
+      const rate = +document.getElementById('e-rate').value;
+      const fb = +document.getElementById('e-fb').value / 100;
+      const staff = +document.getElementById('e-staff').value;
+
+      document.getElementById('v-seats').textContent = seats;
+      document.getElementById('v-occ').textContent = Math.round(occ * 100) + '%';
+      document.getElementById('v-rent').textContent = '₹' + rent.toLocaleString('en-IN');
+      document.getElementById('v-rate').textContent = '₹' + rate;
+      document.getElementById('v-fb').textContent = Math.round(fb * 100) + '%';
+      document.getElementById('v-staff').textContent = staff + (staff === 1 ? ' person' : ' people');
+
+      const days = 26;
+      const paid = Math.round(seats * occ);
+      const spaceRev = paid * rate * days;
+      const fbRev = Math.round(spaceRev * fb);
+      const totalRev = spaceRev + fbRev;
+      const coffCost = Math.round(paid * 30 * days);
+      const staffCost = staff * 14000;
+      const internet = 6000;
+      const supplies = 4000;
+      const mktg = 8000;
+      const sub = rent + coffCost + staffCost + internet + supplies + mktg;
+      const misc = Math.round(sub * 0.10);
+      const totalCost = sub + misc;
+      const profit = totalRev - totalCost;
+      const beOcc = Math.ceil((totalCost / (rate * days)) / seats * 100);
+
+      document.getElementById('m-rev').textContent = fmt(totalRev);
+      document.getElementById('m-cost').textContent = fmt(totalCost);
+      const pe = document.getElementById('m-profit');
+      pe.textContent = (profit < 0 ? '−' : '') + fmt(profit);
+      pe.className = 'metric-val ' + (profit >= 0 ? 'pos' : 'neg');
+      document.getElementById('m-be').textContent = beOcc + '%';
+
+      const rows = [
+        { label: 'Space access revenue', val: spaceRev, type: 'rev' },
+        { label: 'F&B upsell revenue', val: fbRev, type: 'rev' },
+        { label: '— Total revenue', val: totalRev, type: 'total-rev' },
+        { label: 'Rent', val: rent, type: 'cost', note: 'target <25% revenue' },
+        { label: 'Staff salaries', val: staffCost, type: 'cost', note: staff + ' × ₹14,000' },
+        { label: 'Coffee & tea (comp.)', val: coffCost, type: 'cost', note: '₹30/person/day · drop-in + credit pack only' },
+        { label: 'Internet + power', val: internet, type: 'cost', note: 'fixed' },
+        { label: 'Supplies & cleaning', val: supplies, type: 'cost', note: 'fixed' },
+        { label: 'Marketing', val: mktg, type: 'cost', note: 'fixed' },
+        { label: 'Contingency (10%)', val: misc, type: 'cost', note: 'buffer' },
+        { label: '— Total costs', val: totalCost, type: 'total-cost' },
+        { label: 'Net profit / loss', val: profit, type: 'profit' },
+      ];
+      document.getElementById('pl-body').innerHTML = rows.map(r => {
+        const isT = r.type.startsWith('total') || r.type === 'profit';
+        const barP = totalRev > 0 ? Math.min(100, Math.round(r.val / totalRev * 100)) : 0;
+        const vc = r.type === 'rev' || r.type === 'total-rev' ? '#7dcea0' : r.type === 'profit' ? (profit >= 0 ? '#7dcea0' : '#e74c3c') : 'var(--gray)';
+        return `<tr style="${isT ? 'background:var(--surface2);font-weight:600;' : ''}border-bottom:1px solid var(--border)">
+      <td style="padding:10px 16px;color:var(--cream)">${r.label}${r.note ? `<div style="font-size:11px;color:var(--gray);font-weight:400">${r.note}</div>` : ''}
+      </td>
+      <td style="padding:10px 16px;color:${vc}">${(r.type === 'profit' && profit < 0 ? '−' : '') + fmt(r.val)}</td>
+      <td style="padding:10px 16px;color:var(--gray);font-size:12px">${isT ? '' : pct(r.val, totalRev)}</td>
+      <td style="padding:10px 16px">${!isT && r.type !== 'rev' ? `<div class="cost-bar-wrap"><div class="cost-bar" style="width:${barP}%;background:${r.type === 'cost' ? 'var(--brown)' : 'var(--green)'}"></div></div>` : ''}</td>
+    </tr>`;
+      }).join('');
+    }
+
+    /* ── SETUP COST CALCULATOR ── */
+    function calcSetup(track) {
+      const inputs = document.querySelectorAll('[data-cat="setup-' + track + '"]');
+      let total = 0;
+      inputs.forEach(i => { total += (+i.value || 0); });
+      document.getElementById('total-' + track).textContent = '₹' + Math.round(total).toLocaleString('en-IN');
+
+      if (track === 'a') {
+        // franchise fee is 6th input (index 7), working capital inputs are the last 2
+        const vals = [...inputs].map(i => +i.value || 0);
+        const fitout = vals[0] + vals[1] + vals[2] + vals[3] + vals[4] + vals[5] + vals[6] + vals[8]; // everything except franchise fee (7) and working (9,10)
+        const franchise = vals[7];
+        const working = vals[9] + vals[10];
+        if (document.getElementById('sa-fitout')) document.getElementById('sa-fitout').textContent = '₹' + fitout.toLocaleString('en-IN');
+        if (document.getElementById('sa-franchise')) document.getElementById('sa-franchise').textContent = '₹' + franchise.toLocaleString('en-IN');
+        if (document.getElementById('sa-working')) document.getElementById('sa-working').textContent = '₹' + working.toLocaleString('en-IN');
+        if (document.getElementById('sa-total')) document.getElementById('sa-total').textContent = '₹' + (fitout + franchise + working).toLocaleString('en-IN');
+        if (document.getElementById('cmp-a')) document.getElementById('cmp-a').textContent = '₹' + Math.round(total).toLocaleString('en-IN');
+      }
+      if (track === 'b') {
+        if (document.getElementById('cmp-b')) document.getElementById('cmp-b').textContent = '₹' + Math.round(total).toLocaleString('en-IN');
+        const ta = +document.getElementById('cmp-a')?.textContent.replace(/[₹,]/g, '') || 0;
+        if (ta > 0 && document.getElementById('cmp-save')) document.getElementById('cmp-save').textContent = Math.round((1 - total / ta) * 100) + '% less capital';
+      }
+    }
+
+    /* ── TRACK B CORNER P&L ── */
+    function recalcCorner() {
+      const seats    = +document.getElementById('cb-seats').value;
+      const checkins = +document.getElementById('cb-checkins').value;
+      const days     = +document.getElementById('cb-days').value;
+      const drink    = +document.getElementById('cb-drink').value;
+      const fb       = +document.getElementById('cb-fb').value;
+      const overhead = +document.getElementById('cb-overhead').value;
+
+      // clamp check-ins to available seats
+      const actualCheckins = Math.min(checkins, seats);
+      document.getElementById('cb-checkins').max = seats;
+
+      document.getElementById('cv-seats').textContent    = seats;
+      document.getElementById('cv-checkins').textContent = actualCheckins;
+      document.getElementById('cv-days').textContent     = days;
+      document.getElementById('cv-drink').textContent    = '₹' + drink;
+      document.getElementById('cv-fb').textContent       = '₹' + fb;
+      document.getElementById('cv-overhead').textContent = '₹' + overhead.toLocaleString('en-IN');
+
+      const totalCheckins   = actualCheckins * days;
+      const offeeCommission = totalCheckins * 75;      // 15% of ₹500
+      const cafeAccessRev   = totalCheckins * 425;     // 85% flows to café
+      const cafeFBRev       = totalCheckins * fb;      // extra F&B spend
+      const totalCafeRev    = cafeAccessRev + cafeFBRev;
+      const drinkCost       = totalCheckins * drink;
+      const totalCost       = drinkCost + overhead;
+      const netProfit       = totalCafeRev - totalCost;
+
+      document.getElementById('cb-m-rev').textContent   = fmt(totalCafeRev);
+      document.getElementById('cb-m-offee').textContent = fmt(offeeCommission);
+      document.getElementById('cb-m-cost').textContent  = fmt(totalCost);
+      const pe = document.getElementById('cb-m-profit');
+      pe.textContent = (netProfit < 0 ? '−' : '') + fmt(netProfit);
+      pe.className   = 'metric-val ' + (netProfit >= 0 ? 'pos' : 'neg');
+
+      const rows = [
+        { label: 'OFFEE Zone access revenue (85% × check-ins)',  val: cafeAccessRev,   perCi: '₹425',      type: 'rev' },
+        { label: 'Extra F&B spend by OFFEE users',               val: cafeFBRev,       perCi: '₹'+fb,      type: 'rev' },
+        { label: '— Total café revenue',                         val: totalCafeRev,    perCi: '',          type: 'total-rev' },
+        { label: 'Complimentary drink (café bears)',             val: drinkCost,       perCi: '₹'+drink,  type: 'cost' },
+        { label: 'Zone overhead (power, cleaning)',               val: overhead,        perCi: 'fixed',     type: 'cost' },
+        { label: '— Total costs',                                 val: totalCost,       perCi: '',          type: 'total-cost' },
+        { label: 'Café net profit',                              val: netProfit,       perCi: '',          type: 'profit' },
+        { label: '[OFFEE commission — separate from above]',     val: offeeCommission, perCi: '₹75',       type: 'offee' },
+      ];
+
+      document.getElementById('cb-pl-body').innerHTML = rows.map(r => {
+        const isT  = r.type.startsWith('total') || r.type === 'profit';
+        const isOf = r.type === 'offee';
+        const barP = totalCafeRev > 0 ? Math.min(100, Math.round(Math.abs(r.val) / totalCafeRev * 100)) : 0;
+        const vc   = r.type === 'rev' || r.type === 'total-rev' ? '#7dcea0'
+                   : r.type === 'profit' ? (netProfit >= 0 ? '#7dcea0' : '#e74c3c')
+                   : r.type === 'offee'  ? 'var(--gold)'
+                   : 'var(--gray)';
+        const barColor = r.type === 'cost' ? 'var(--brown)' : 'var(--green)';
+        return `<tr style="${
+          isT  ? 'background:var(--surface2);font-weight:600;' :
+          isOf ? 'background:rgba(201,169,110,0.07);border-top:1px dashed rgba(201,169,110,0.3);' : ''
+        }border-bottom:1px solid var(--border)">
+          <td style="padding:10px 16px;color:${isOf ? 'var(--gold)' : 'var(--cream)'}">${r.label}</td>
+          <td style="padding:10px 16px;color:${vc}">${(r.type==='profit'&&netProfit<0?'−':'') + fmt(r.val)}</td>
+          <td style="padding:10px 16px;color:var(--gray);font-size:12px">${r.perCi}</td>
+          <td style="padding:10px 16px">${!isT && !isOf ? `<div class="cost-bar-wrap"><div class="cost-bar" style="width:${barP}%;background:${barColor}"></div></div>` : ''}</td>
+        </tr>`;
+      }).join('');
+    }
+
+    recalc();
+    calcSetup('a');
+    calcSetup('b');
+    recalcCorner();
+  </script>
+</body>
+
+</html>
