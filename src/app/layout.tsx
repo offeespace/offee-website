@@ -25,6 +25,7 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://offee.space"),
   title: {
     template: "%s | OFFEE",
     default: "OFFEE — Discover & Book Verified Workspaces & Cafés",
@@ -38,15 +39,11 @@ export const metadata: Metadata = {
     title: "OFFEE — Discover & Book Verified Workspaces",
     description: "Work from the best verified cafes, coworking spaces, and meeting rooms. Instant booking, guaranteed seating, and reliable Wi-Fi.",
     siteName: "OFFEE",
-    images: [{
-      url: "https://offee.space/brand/logo-word-dark.png",
-    }],
   },
   twitter: {
     card: "summary_large_image",
     title: "OFFEE — Premium Workspace Booking",
     description: "Work from the best verified cafes, coworking spaces, and meeting rooms. Instant booking, guaranteed seating, and reliable Wi-Fi.",
-    images: ["https://offee.space/brand/logo-word-dark.png"],
   },
   robots: {
     index: true,
