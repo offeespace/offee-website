@@ -1,26 +1,71 @@
 @import "tailwindcss";
+@plugin "@tailwindcss/typography";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --color-brand-black: #1A1A1A;
+  --color-brand-cream: #E7DCC6;
+  --color-brand-brown: #7B5E3C;
+  --color-brand-green: #4D5A43;
+  --color-brand-gold: #C9A96E;
+  
+  --color-bg-primary: #F9F7F2;
+  --color-surface-1: #FFFFFF;
+  --color-surface-2: #F2ECE4;
+  --color-border-brand: rgba(77, 90, 67, 0.12);
+
+  --font-display: var(--font-sora), sans-serif;
+  --font-body: var(--font-poppins), sans-serif;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* Base styles */
+@layer base {
+  body {
+    @apply bg-bg-primary text-brand-black font-body antialiased selection:bg-brand-green selection:text-white;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display tracking-tight text-brand-green;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* Utilities for glassmorphism */
+@layer utilities {
+  .glass {
+    background: rgba(255, 255, 255, 0.50);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(77, 90, 67, 0.15);
+  }
+
+  .glass-dark {
+    background: rgba(255, 255, 255, 0.10);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+  }
+
+  .glass-card {
+    background: rgba(255, 255, 255, 0.50);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(77, 90, 67, 0.15);
+    border-radius: 32px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.04);
+  }
+  
+  .glass-nav {
+    background-color: rgba(255, 255, 255, 0.70);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+  }
+
+  .glass-nav-dark {
+    background-color: rgba(0, 0, 0, 0.50);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+  }
 }

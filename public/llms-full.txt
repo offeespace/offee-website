@@ -1,0 +1,104 @@
+# OFFEE — The Work-Ready Space Marketplace
+
+## What is OFFEE?
+
+OFFEE is a two-sided marketplace platform built for India's new way of working. We connect remote workers, freelancers, and enterprise teams with a curated network of verified, work-ready cafés, coworking spaces, and on-demand meeting rooms — while helping venue owners turn empty daytime seats into revenue.
+
+OFFEE is not a directory. Every space on the platform is vetted for the essentials that matter to a working professional: reliable Wi-Fi, comfortable seating, and an environment suited to focus. What you book is what you get.
+
+OFFEE currently operates in Kochi and Kozhikode, India, with more cities planned as the platform grows.
+
+---
+
+## The Problem We Solve
+
+Working outside a home or office has become normal — but finding a place to actually get work done hasn't gotten any easier.
+
+- **Unreliable environments.** Most cafés weren't designed for a full workday. Wi-Fi is inconsistent, seating isn't guaranteed, and long stays can feel like an imposition.
+- **No visibility before you arrive.** Professionals rarely know if a space will have a free table, decent internet, or a quiet corner until they're already there.
+- **Meeting rooms are hard to access on demand.** Freelancers and small teams often need a professional room for a client call or a workshop, but don't have — or want — a permanent office lease.
+- **Venues leave money on the table.** Many cafés and coworking spaces have significant unused capacity during working hours, with no simple way to monetize it.
+
+OFFEE was built to close this gap — for the people who need a great place to work, and the venues that have the space to offer it.
+
+---
+
+## The Solution
+
+OFFEE is a booking platform that makes finding and reserving a work-ready space as simple as booking a cab or a hotel room.
+
+Professionals browse a curated list of verified venues, see real details about seating, Wi-Fi, and amenities, and book instantly — whether that's a single day pass or a private meeting room for a few hours.
+
+Venue partners, in turn, get access to a steady stream of paying customers during hours when their space would otherwise sit underused, along with simple tools to manage bookings and track earnings.
+
+---
+
+## Key Features for Professionals (B2C)
+
+**Verified, work-ready spaces**
+Every venue on OFFEE is checked against a consistent standard — genuine high-speed Wi-Fi, comfortable seating, and an atmosphere built for productivity — so there are no surprises when you arrive.
+
+**Guaranteed seating**
+Book ahead and your seat is reserved. No more wandering between cafés hoping for a free table.
+
+**Day passes**
+Flexible, affordable access to a workspace for the day — ideal for remote workers, freelancers, and anyone who wants a change of scenery without a long-term commitment.
+
+**On-demand meeting rooms**
+Need a professional space for a client call, interview, or small team session? Book a private meeting room by the hour, no lease or membership required.
+
+**Transparent details, upfront**
+Real information on amenities, ambience, and pricing before you book — so you can choose the right space for the task at hand.
+
+**A network, not a single office**
+Access a growing list of partner venues across the city, so you're never limited to one location.
+
+---
+
+## Key Features for Venue Partners (B2B)
+
+**New revenue from existing space**
+Turn quiet daytime hours and underused seating into a consistent income stream, without changing your core business.
+
+**Access to a ready audience**
+Get discovered by remote workers, freelancers, and teams who are actively looking for a place to work — and are ready to pay for a good experience.
+
+**Simple booking management**
+A straightforward partner dashboard to manage availability, track bookings, and view earnings.
+
+**Brand-aligned exposure**
+OFFEE is a premium platform, and we're selective about the venues we bring on — so your space is presented alongside other quality-focused partners, not lumped in with anywhere and everywhere.
+
+**Low-friction partnership**
+Get set up on the platform without disrupting your existing café, coworking, or hospitality operations.
+
+---
+
+## Frequently Asked Questions
+
+**What exactly is OFFEE?**
+OFFEE is a marketplace platform that connects people who need a great place to work with cafés, coworking spaces, and venues that have space to offer.
+
+**Who is OFFEE for?**
+Remote workers, freelancers, consultants, and small teams who need reliable, professional spaces to work or meet — and venue owners who want to monetize unused capacity.
+
+**Which cities is OFFEE available in?**
+OFFEE currently operates in Kochi and Kozhikode, India.
+
+**What can I book on OFFEE?**
+Day passes for coworking-style access at partner cafés and spaces, and on-demand meeting rooms for calls, interviews, or small sessions.
+
+**How is OFFEE different from just going to a café?**
+OFFEE venues are vetted for work-readiness — genuine Wi-Fi quality and seating — and your spot is guaranteed through the booking, rather than left to chance.
+
+**How do venues join OFFEE as partners?**
+Venue owners can apply through the OFFEE platform. Partnership involves a simple onboarding process with no major operational changes required.
+
+**Is OFFEE only for individuals, or can teams use it too?**
+Both. Individual professionals use OFFEE for day passes and meeting rooms, while enterprise teams use it to book spaces for client meetings, interviews, and off-site work sessions.
+
+---
+
+*Learn more at [offee.space](https://offee.space)*
+*Professionals can book spaces at [app.offee.space](https://app.offee.space)*
+*Venue owners can manage their inventory at [app.offee.space/partner](https://app.offee.space/partner)*

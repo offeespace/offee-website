@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://offee.space
+
+# Sitemaps
+Sitemap: https://offee.space/sitemap.xml

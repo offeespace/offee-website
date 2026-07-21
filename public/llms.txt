@@ -1,0 +1,13 @@
+# OFFEE
+
+> OFFEE is a premium marketplace connecting India's remote workers, freelancers, and enterprise teams with verified, work-ready cafés, coworking spaces, and on-demand meeting rooms.
+
+OFFEE solves the daily friction of working outside a traditional office: unreliable Wi-Fi, no guaranteed seating, and awkward "one coffee, five hours" etiquette. Through the OFFEE platform, professionals can instantly book day passes or meeting rooms at a curated network of partner venues, with seating and connectivity guaranteed in advance.
+
+For venue owners — cafés, coworking spaces, and hospitality brands — OFFEE turns underused daytime capacity into a reliable new revenue stream, connecting them with a ready audience of paying professionals.
+
+OFFEE currently operates in Kochi and Kozhikode, India.
+
+- [Website](https://offee.space)
+- [Book a Space (Users)](https://app.offee.space)
+- [Partner Portal (Venues)](https://app.offee.space/partner)
